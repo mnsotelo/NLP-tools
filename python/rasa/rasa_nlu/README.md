@@ -4,7 +4,7 @@ Preconfigured setup for intent and entity extraction with rasa-nlu tensorflow em
 
 # Requirements
 
-1. **Python 3.5**. Also you can create a virtualenv with python 3.5 (`virtualenv -p python3.5 venv`) and activate it (`source venv/bin/activate`). 
+1. **Python 3.5**. Also you can create a virtual enviroment with python 3.5 (`virtualenv -p python3.5 venv`) and activate it (`source venv/bin/activate`). 
 2. Dependencies libraries with requirements file: `pip install -r requirements.txt`. Or use : `pip install rasa_nlu` 
 and `pip install rasa_nlu[tensorflow]`.
 
