@@ -1,0 +1,123 @@
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /sede/ /en/ $SLOT_VALUE )}
+#Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /sede/ /en/ $SLOT_VALUE )}
+#Global Footprint Network, una organización de investigación medioambiental con base en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /base/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /base/ /en/ $SLOT_VALUE )}
+# Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /basado|basada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /basado|basada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /oficina/ /principal/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /oficina/ /principal/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /con/ /sede/ /en/ $SLOT_VALUE )}
+#Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /con/ /sede/ /en/ $SLOT_VALUE )}
+#Global Footprint Network, una organización de investigación medioambiental con base en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /con/ /base/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /con/ /base/ /en/ $SLOT_VALUE )}
+# Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /basado|basada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /basado|basada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( /[Cc]on/ /su/ /sede|base|sucursal/ /en/ $SLOT_VALUE /,/ $ENTITY )}
+{ result: "org:country_of_headquarters", pattern: ( /[Cc]on/ /su/ /sede|base|sucursal/ /en/ $SLOT_VALUE /,/ /el|la/ []{1,2} $ENTITY )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /que/ /tiene/ /su|un|una/? /sede|base|sucursal/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /que/ /tiene/ /su|un|una/? /sede|base|sucursal/ /en/ $SLOT_VALUE  )}
+# La infraestructura de la red de recarga: Project Better Place, cuya sede se encuentra en California, tiene la intención de construir una gran red de puntos de recarga de batería. 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /se/ /localiza/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /se/ /localiza/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /está/ /ubicada|ubicado/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /está/ /ubicada|ubicado/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /se/ /localiza/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /se/ /localiza/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /está/ /ubicada|ubicado/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /está/ /ubicada|ubicado/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /tiene/ /su|un|una/? /sede|base|sucursal/ /está/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /tiene/ /su|un|una/? /sede|base|sucursal/ /está/ /en/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /está/ /ubicada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /está/ /ubicada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /se/ /encuentra/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /se/ /encuentra/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /está/ /ubicada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /está/ /ubicada/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /se/ /encuentra/ /en/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /se/ /encuentra/ /en/ $SLOT_VALUE )}
+
+#//Digital Persona, una compañía con sede en California. 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /sede/ /en/  /la/ /ciudad/ /de/$SLOT_VALUE )}
+#Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /sede/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+#Global Footprint Network, una organización de investigación medioambiental con base en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /base/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /base/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+# Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /basado|basada/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /basado|basada/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /con/ /sede/ /en/ $SLOT_VALUE )}
+#Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /con/ /sede/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+#Global Footprint Network, una organización de investigación medioambiental con base en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /con/ /base/ /en/  /la/ /ciudad/ /de/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /con/ /base/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+# Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /basado|basada/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /basado|basada/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( /[Cc]on/ /su/ /sede|base|sucursal/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE /,/ $ENTITY )}
+{ result: "org:country_of_headquarters", pattern: ( /[Cc]on/ /su/ /sede|base|sucursal/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE /,/ /el|la/ []{1,2} $ENTITY )}
+# lanzado por Tesla Motors, que tiene su fábrica en California, cuya producción comenzará a finales de 2011, tiene una autonomía de 300 millas (482,7 km). 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /que/ /tiene/ /su/ /sede|base|sucursal/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /que/ /tiene/ /su/ /sede|base|sucursal/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+# La infraestructura de la red de recarga: Project Better Place, cuya sede se encuentra en California, tiene la intención de construir una gran red de puntos de recarga de batería. 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /se/ /localiza/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /se/ /localiza/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /está/ /ubicada|ubicado/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /está/ /ubicada|ubicado/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /tiene/ /un|una/? /sede|base|sucursal/ /está/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /tiene/ /un|una/? /sede|base|sucursal/ /está/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE  )}
+#//Digital Persona, una compañía con sede en California. 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /sede/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+#Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /sede/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+#Global Footprint Network, una organización de investigación medioambiental con base en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /base/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /base/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+# Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /basado|basada/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /basado|basada/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /con/ /oficina/ /principal/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /una|un/ [] /de/ []{1,4} /con/ /oficina/ /principal/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /con/ /sede/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+#Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /con/ /sede/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+#Global Footprint Network, una organización de investigación medioambiental con base en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /con/ /base/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /con/ /base/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+# Current TV, una empresa de medios de comunicación basada en California
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /basado|basada/ /en/ []{1,4} /,/  $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /una|un/ [] /de/ []{1,4} /basado|basada/ /en/ []{1,4} /,/  $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( /[Cc]on/ /su/ /sede|base|sucursal/ /en/ []{1,4} /,/ $SLOT_VALUE /,/ $ENTITY )}
+{ result: "org:country_of_headquarters", pattern: ( /[Cc]on/ /su/ /sede|base|sucursal/ /en/ []{1,4} /,/ $SLOT_VALUE /,/ /el|la/ []{1,2} $ENTITY )}
+# lanzado por Tesla Motors, que tiene su fábrica en California, cuya producción comenzará a finales de 2011, tiene una autonomía de 300 millas (482,7 km). 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /que/ /tiene/ /su|un|una/? /sede|base|sucursal/ /en/ []{1,4} /,/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /que/ /tiene/ /su|un|una/? /sede|base|sucursal/ /en/ []{1,4} /,/ $SLOT_VALUE  )}
+# La infraestructura de la red de recarga: Project Better Place, cuya sede se encuentra en California, tiene la intención de construir una gran red de puntos de recarga de batería. 
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /se/ /localiza/ /en/ []{1,4} /,/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /se/ /localiza/ /en/ []{1,4} /,/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /está/ /ubicada|ubicado/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /sede|base|sucursal/ /está/ /ubicada|ubicado/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /se/ /localiza/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /se/ /localiza/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /está/ /ubicada|ubicado/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /cuya|cuyo/ /oficina/ /central|principal/ /está/ /ubicada|ubicado/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /tiene/ /su|un|una/? /sede|base|sucursal/ /está/ /en/ []{1,4} /,/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,/ /tiene/ /su|un|una/? /sede|base|sucursal/ /está/ /en/ []{1,4} /,/ $SLOT_VALUE  )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /está/ /ubicada/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /está/ /ubicada/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /se/ /encuentra/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /sede|base|sucursal/ /central|principal/? /se/ /encuentra/ /en/ []{1,4} /,/ $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /está/ /ubicada/ /en/ []{1,4} /,/  $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /está/ /ubicada/ /en/ []{1,4} /,/  $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /se/ /encuentra/ /en/ []{1,4} /,/  $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /oficina/ /central|principal/? /se/ /encuentra/ /en/ []{1,4} /,/  $SLOT_VALUE )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /,|-+|=LRB=|-LRB-/ $SLOT_VALUE /,|-+|=RRB=|-RRB-/ )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /-+|=LRB=|-LRB-/ $SLOT_VALUE /,/ []{1,3} /-+|=RRB=|-RRB-/ )}
+{ result: "org:country_of_headquarters", pattern: ( $ENTITY /-+|=LRB=|-LRB-/ []{1,4} /,/ $SLOT_VALUE /-+|=RRB=|-RRB-/ )}

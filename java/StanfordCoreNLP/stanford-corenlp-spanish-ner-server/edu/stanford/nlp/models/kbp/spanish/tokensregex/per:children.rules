@@ -1,0 +1,56 @@
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ [] /padre|madre|papá|mamá/ /de/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ [] /padre|madre|papá|mamá/ /de/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ [] /padre|madre|papá|mamá/ /de|del/  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ [] /padre|madre|papá|mamá/ /de/ /la/  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ [] /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ /padre|madre|papá|mamá/ /de|del/  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]?  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /el|la/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]?  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ [] /padre|madre|papá|mamá/ /de/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ [] /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]?  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /padre|madre|papá|mamá/ /de|del/ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /,/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:children", pattern: ( $ENTITY /es/ /el|la/ [] /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ [] /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /el|la/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /el|la/ [] /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /el|la/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ [] /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ [] /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ [] /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /padre|madre|papá|mamá/ /de/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /es/ /padre|madre|papá|mamá/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /dió/ /a/ /luz/ /a/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /dió/ /a/ /luz/ /a/ /su/ /niño|niña|hijo|hija/ /,/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( /padre|madre|papá|mamá/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:children", pattern: ( $SLOT_VALUE /y|con/ /su/ /padre|madre|papá|mamá/ /,/? $ENTITY) }
+{ result: "per:children", pattern: ( $SLOT_VALUE /y|con/ [] /su/ /padre|madre|papá|mamá/ /,/? $ENTITY) }
+{ result: "per:children", pattern: ( /hijo|hija|niño|niña/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( /hijo|hija|niño|niña/ /de/ $ENTITY $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $SLOT_VALUE /es/ /hijo|hija|niño|niña/ /de/ $ENTITY ) }
+{ result: "per:children", pattern: ( $SLOT_VALUE /,/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}] $ENTITY ) }
+{ result: "per:children", pattern: ( $SLOT_VALUE /el|la/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? $ENTITY ) }
+#Cristina Fernández y su hijo, Máximo Kirchner.
+{ result: "per:children", pattern: ( $ENTITY /y/ /su/ /hijo|hija|niño|niña/ /,/? $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /y/ /su/ /hijo|hija|niño|niña/ /,/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /y/ /sus/ /hij[oa]s/ /,/ $SLOT_VALUE  ) }
+{ result: "per:children", pattern: ( $ENTITY /y/ /sus/ /hij[oa]s/ /,/ []{1,2} /y/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /a|por|para/ /su/ /hijo|hija|niño|niña/ /,/? $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /a|por|para/ /sus/ /hij[oa]s/ /,/ $SLOT_VALUE  ) }
+{ result: "per:children", pattern: ( $ENTITY /a|por|para/ /sus/ /hij[oa]s/ /,/ []{1,2} /y/ $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /y/ [] /su/ /hijo|hija|niño|niña/ /,/? $SLOT_VALUE ) }
+{ result: "per:children", pattern: ( $ENTITY /y/ [] /sus/ /hij[oa]s/ /,/ $SLOT_VALUE  ) }
+{ result: "per:children", pattern: ( $ENTITY /y/ [] /sus/ /hij[oa]s/ /,/ []{1,2} /y/ $SLOT_VALUE ) }
+
+
+
+

@@ -1,0 +1,43 @@
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ $SLOT_VALUE_CITY /,/ /la/ /capital/ /de/ [ { ner:COUNTRY } ]) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ $SLOT_VALUE_CITY /,/ /la/ /capital/ /de/ [ { ner:COUNTRY } ]) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ $SLOT_VALUE_CITY /,/ [ { ner:COUNTRY } ] ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /había/ /nacido/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY  /,/  /nació|nacido|nacida/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /procede/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /,/ /procede/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /naciera/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY  /había/ /nacido/  []{0,6}  /en/  $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $SLOT_VALUE_CITY /de/ /origen/ /,/  $ENTITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /fue|era|es/ $SLOT_VALUE_CITY /de/ /origen/ ) }
+{ result: "per:city_of_birth", pattern: (  $SLOT_VALUE_CITY /fue|era|es/ /el/ /lugar/ /de/ /nacimiento/ /de|del/ []{0,2} $ENTITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ /la|el/ /ciudad|pueblo|aldea|poblado|pueblito/ []{0,2} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /había/ /nacido/ /en/ /la|el/ /ciudad|pueblo|aldea|poblado|pueblito/ []{0,2} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY  /,/ /nació|nacido|nacida/ /en/ /la|el/ /ciudad|pueblo|aldea|poblado|pueblito/ []{0,2} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /procede/ /de|del/ []{0,2} /ciudad|pueblo|aldea|poblado|pueblito/ []{0,1} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /,/ /procede/ /de|del/ []{0,2} /ciudad|pueblo|aldea|poblado|pueblito/ []{0,1} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /naciera/ /en/ /la|el/ /ciudad|pueblo|aldea|poblado|pueblito/ []{0,1} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY  /había/ /nacido/  []{0,6}  /en/ /la|el/ /ciudad|pueblo|aldea|poblado|pueblito/ []{0,1} $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /fue|era|es/ $SLOT_VALUE_CITY /de/ /origen/ ) }
+{ result: "per:city_of_birth", pattern: (  $SLOT_VALUE_CITY /fue|era|es/ /el|la/ /ciudad|pueblo|aldea|poblado|pueblito/ /de/ /nacimiento/ /de|del/ []{0,2} $ENTITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ /[0-9]{3,4}/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ /[0-9]{3,4}/ /en/ /la|el/ /ciudad|pueblo|aldea|poblado|pueblito/ $SLOT_VALUE_CITY ) }
+## above patterns are working-ish, but need improvement
+{ result: "per:city_of_birth", pattern: (  $ENTITY /,/ /que/ /nació/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /,/ /nació/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /,/ /nacido/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /,/ /nacida/ /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació/ /en/ /un/ /hospital/ [] /en/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació/ /en/ /un/ /hospital/ [] /en/ /la/ /ciudad/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació/ /en/ /un/ /hospital/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE_CITY ) } 
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació/ /en/ /un/ /hospital/ [] /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació/ /en/ /un/ /hospital/ [] /de/ /la/ /ciudad/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_birth", pattern: (  $ENTITY /nació/ /en/ /un/ /hospital/ /de/ /la/ /ciudad/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_brith", pattern: ( $ENTITY /,/ /natal/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_brith", pattern: ( $ENTITY /,/ /es/ /natal/ /de/ $SLOT_VALUE_CITY ) }
+{ result: "per:city_of_brith", pattern: ( $ENTITY /es/ /natal/ /de/ $SLOT_VALUE_CITY ) }
+# Chen, nacido en 1952, es natal de la ciudad de Haicheng, provincia de Liaoning,
+{ result: "per:city_of_brith", pattern: ( $ENTITY /,/ /nacid[oa]/ /en/ /[0-9]+/ /,/ /es/ /natal/ /de/ /la/ /ciudad/ /de/ $SLOT_VALUE_CITY )  }
+{ result: "per:city_of_brith", pattern: ( /la/ /casa/ /natal/ /de/ $ENTITY /,/ /en/  $SLOT_VALUE_CITY )  }
+{ result: "per:city_of_brith", pattern: ( $SLOT_VALUE_CITY /,/ /ciudad/ /natal/ /de/ $ENTITY )  }
+{ result: "per:city_of_brith", pattern: ( $SLOT_VALUE_CITY /-LRB-|=LRB=/ /ciudad/ /natal/ /de/ $ENTITY )  }

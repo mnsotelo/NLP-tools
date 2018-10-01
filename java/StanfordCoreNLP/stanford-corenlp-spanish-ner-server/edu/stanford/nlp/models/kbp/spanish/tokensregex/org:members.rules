@@ -1,0 +1,31 @@
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /miembro|afiliado/ /de/ $ENTITY )}
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /miembro|afiliado/ /del/ /grupo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /miembro|afiliado/ /del/ /partido/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /miembro|afiliado/ /del/ /equipo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /un/ /miembro|afiliado/ /de/ $ENTITY )}
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /un/ /miembro|afiliado/ /del/ /grupo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /un/ /miembro|afiliado/ /del/ /partido/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /un/ /miembro|afiliado/ /del/ /equipo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /miembro|afiliado/ /de/ $ENTITY )}
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /miembro|afiliado/ /del/ /grupo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /miembro|afiliado/ /del/ /partido/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /miembro|afiliado/ /del/ /equipo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /un/ /miembro|afiliado/ /de/ $ENTITY )}
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /un/ /miembro|afiliado/ /del/ /grupo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /un/ /miembro|afiliado/ /del/ /partido/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /un/ /miembro|afiliado/ /del/ /equipo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /era|es|fue/ /baterista|tecladista|corista|guitarrista|bajista|violinista|violonchelista|chelista/ /de|del|por|en/ /los|las/? $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /era|es|fue/ /el|la/ []{0,2} /baterista|tecladista|corista|guitarrista|bajista|violinista|violonchelista|chelista/ []{0,2} /de|del|por/ /los|las/? $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /baterista|tecladista|corista|guitarrista|bajista|violinista|violonchelista|chelista/ /de|del|por|en/ /los|las/? $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /baterista|tecladista|corista|guitarrista|bajista|violinista|violonchelista|chelista/ /de|del|por|en/ /la/? /banda|grupo/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /tocaba/ /por|con|en/ /los|las/? $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /tocaba/ /por|con|en/ /el|la/ /grupo|banda/ /los|las/? $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /está|estaba|estuvo/ /empleado/ /por/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era|fue/ /empleado|empleada/ /de/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /empleado/ /por/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /empleado|empleada/ /por/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /un|una/ /empleado|empleada/ /de/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /miembro|afiliado/ /del/ /grupo/ /political|activista/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /es|era/ /miembro|afiliado/ /del/ /partido/ /political|activista/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /miembro|afiliado/ /del/ /grupo/ /political|activista/ $ENTITY ) }
+{ result: "org:member" , pattern: ( $SLOT_VALUE /,/ /miembro|afiliado/ /del/ /partido/ /political|activista/ $ENTITY ) }

@@ -1,0 +1,30 @@
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /,/ [] /hermano|hermana|hermanastra|hermanastro/ /de/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /,/ /hermano|hermana|hermanastra|hermanastro/ /de/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $ENTITY /,/ [] /hermano|hermana|hermanastra|hermanastro/ /de/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $ENTITY /,/ /hermano|hermana|hermanastra|hermanastro/ /de/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /es|era/ /el|la/ [] /hermano|hermana|hermanastra|hermanastro/ /de/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /es|era/ /el|la/ /hermano|hermana|hermanastra|hermanastro/ /de/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $ENTITY /es|era/ /el|la/ [] /hermano|hermana|hermanastra|hermanastro/ /de/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $ENTITY /es|era/ /el|la/ /hermano|hermana|hermanastra|hermanastro/ /de/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $ENTITY /hermano|hermana|hermanastra|hermanastro/ /,/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $ENTITY /hermano|hermana|hermanastra|hermanastro/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $ENTITY /hermano|hermana|hermanastra|hermanastro/ $SLOT_VALUE ) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /'s/ /hermano|hermana|hermanastra|hermanastro/ /,/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $ENTITY $SLOT_VALUE /hermano|hermana|hermanastra|hermanastro/ /,/) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /hermano|hermana|hermanastra|hermanastro/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $ENTITY /y/ $SLOT_VALUE /son|eran/ /hermanos|hermanas|hermanastras|hermanastros/ ) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /y/ $ENTITY /son|eran/ /son|eran/ /hermanos|hermanas|hermanastras|hermanastros/ ) }
+{ result: "per:siblings", pattern: ( $SLOT_VALUE /es|era/ /el|la/ /hermano|hermana|hermanastra|hermanastro/ /de/ $ENTITY ) }
+{ result: "per:siblings", pattern: ( $ENTITY /es|era/ /hermano|hermana|hermanastra|hermanastro/ /de/ SLOT_VALUE ) }
+// Translated from Ce's patterns
+{ result:"per:siblings", pattern: ( $ENTITY /y/ /su/ /hermano/ $SLOT_VALUE ) }
+{ result:"per:siblings", pattern: ( $ENTITY /y/ /su/ /hermana/ $SLOT_VALUE ) }
+{ result:"per:siblings", pattern: ( $ENTITY /hermana|hermano|hermanastro|hermanastra/ [{lemma:/--/}] $SLOT_VALUE ) }
+{ result:"per:siblings", pattern: ( /[Hh]ermano|[Hh]ermana|[Hh]ermanastro|[Hh]ermanastra/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:siblings", pattern: ( /[Mm]edio|media/ /hermano|hermana/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:siblings", pattern: ( /hermano|hermana|hermano|hermanastro/ /mayor|menor/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result:"per:siblings", pattern: ( $SLOT_VALUE /,/ /y/ /hermano|hermana|hermanastro|hermanastra/ $ENTITY )}
+{ result:"per:siblings", pattern: ( $SLOT_VALUE /,/ /y/ /su/ /hermano|hermana|hermanastro|hermanastra/ $ENTITY )}
+{ result:"per:siblings", pattern: ( $SLOT_VALUE /,/ /el|la/ /hermano|hermana|hermanastro|hermanastra/ /del/ /presidente/ $ENTITY )}
+{ result:"per:siblings", pattern: ( $SLOT_VALUE /,/ /quien|que/ /sucedió|sucedirá/ /a/ /su/ /hermano|hermana/ $ENTITY ) }
+{ result:"per:siblings", pattern: ( $SLOT_VALUE /y/ /su/ /hermano|hermana/ $ENTITY ) }

@@ -1,0 +1,71 @@
+{ result: "org:top_members/employees", pattern: ( $TOP_TITLE /de|del/ /la/? $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $ENTITY $TOP_TITLE /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $TOP_TITLE /de|del/ /la/? $ENTITY $SLOT_VALUE ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $ENTITY $TOP_TITLE $SLOT_VALUE ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/ $TOP_TITLE /de|del/ /la/? $ENTITY ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/ []{0,2} $TOP_TITLE /de|del/ /la/? $ENTITY ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $ENTITY /,/ /cuyo|cuya/ $TOP_TITLE /,/? $SLOT_VALUE ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [] /se/ /incorpora|incorpará/ /a/ /la/ /[Jj]unta/ /de|del/ /la?/ $ENTITY ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [] /se/ /ha/ /incorporado/  /a/ /la/ /[Jj]unta/ /de|del/ /la/? $ENTITY ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [] /se/ /incorpora|incorpará/ /al/ /[Cc]omité/ /[Ee]jecutivo/ /de|del/ /la/? $ENTITY ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [] /se/ /ha/ /incorporado/ /al/ /[Cc]omité/ /[Ee]jecutivo/ /de|del/ /de|del/ /la/? $ENTITY ) , weight: 1.0}
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /maneja|manejaba/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /ordena|ordenaba/  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /supervisa/  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: ( "CEO" /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/  "CEO" /de/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: ( /consejero/ /delegado/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/  /consejero/ /delegado/ /de/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: ( /director/ /[Ee]jecutivo|gerente/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/  /director/ /[Ee]jecutivo|gerente/ /de/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: ( /ex/? /presidente|presidenta/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/ /ex/? /presidente|presidenta/ /de/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: ( /ex/? /vicepresidente|vicepresidenta/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/ /ex/? /vicepresidente|vicepresidenta/ /de/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: ( /director/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/  /director/ /de/ $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  /decana/ /de|del/ /la/? $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es/ /miembro/ /del/ /comité/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/? /CFO|cfo/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/? /CEO|ceo/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/? /presidente|presidenta/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/? /vicepresidente/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/? /director/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/ /rector/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE /es|fue|era/ /el|la/ /decano|decana/ /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," /miembro/ /del/ /[cC]omité/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "CFO"  /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "CEO"  /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "presidente" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "vicepresidente" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "director" /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "presidenta" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "vicepresident" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "directora" /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "rector" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "decana" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "un"  "miembro" "de" "la" /[Jj]unta/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "CFO" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "CEO" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "presidente" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "vicepresidente" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "director" /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "presidenta" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "vicepresidenta" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "directora" /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "rector" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "decana" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "un" "ex" "miembro" "de" "la" /[Jj]unta/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "ex" "miembro" "de" "la" /[Jj]unta/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "CFO" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "CEO" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "presidente" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "vicepresidente" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antigua" "presidenta" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antigua" "vicepresidenta" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "director" /de|del/ /la/?  $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "rector" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "decana" /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "un" "antiguo" "miembro" "de" "la" /[Jj]unta/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:top_members/employees", pattern: (  $SLOT_VALUE "," "antiguo" "miembro" "de" "la" /[Jj]unta/ /de|del/ /la/? $ENTITY  ) }
+

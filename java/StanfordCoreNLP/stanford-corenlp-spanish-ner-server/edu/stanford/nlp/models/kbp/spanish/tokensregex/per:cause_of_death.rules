@@ -1,0 +1,88 @@
+# first pass patterns
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /durante/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /murió/ /durante/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /durante/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /murió/ /durante/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /durante/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /murió/ /durante/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /durante/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /murió/ /durante/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+#{ result:"per:cause_of_death" , pattern: ( /[Ee]l/ $SLOT_VALUE_CAUSE_OF_DEATH /de/ $ENTITY_PER ) }
+#{ result:"per:cause_of_death" , pattern: ( /[Ll]a/ $SLOT_VALUE_CAUSE_OF_DEATH /de/ $ENTITY_PER ) }
+# pass two
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /falleció/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /falleció/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /falleció/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /de/ /un/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /de/ /una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /en/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /debido/ /a/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /debido/ /a/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /a/ /causa/ /de/ /el|la|un|una/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /quien|que/ /falleció/ /a/ /causa/ /de/ $SLOT_VALUE_CAUSE_OF_DEATH ) }
+# suicide specific
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /se/ $SLOT_VALUE_SUICIDE_VERB ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /se/ $SLOT_VALUE_SUICIDE_VERB ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /quien|que/ /se/ $SLOT_VALUE_SUICIDE_VERB ) }
+{ result:"per:cause_of_death" , pattern: ($ENTITY_PER /,/ /se/ $SLOT_VALUE_SUICIDE_VERB ) }
+{ result:"per:cause_of_death" , pattern: ( /[Ee]l/ $SLOT_VALUE_SUICIDE_NOUN /de/ $ENTITY_PER ) }
+{ result:"per:cause_of_death" , pattern: ( /[Ee]l/ $SLOT_VALUE_MURDER_NOUN /de/ $ENTITY_PER ) }
+{ result:"per:cause_of_death" , pattern: ( /[Ll]a/ $SLOT_VALUE_MURDER_NOUN /de/ $ENTITY_PER ) }
+
+
+
+

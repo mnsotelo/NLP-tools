@@ -1,0 +1,31 @@
+{ result: "org:founded_by", pattern: (  $ENTITY /fue/ /fundado|fundada|creado|creada|establecido|establecida/ /por/ $SLOT_VALUE ) }
+{ result: "org:founded_by", pattern: (  $ENTITY /fue/ /fundado|fundada/ /en/ []{0,4} /por/ $SLOT_VALUE ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE []{0,3} /,|-LRB-|=LRB=/ /fundador|fundadora|creador|creadora|co-fundador|cofundador/ /de/ /el|la/ $SLOT_VALUE ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ /también/ /fundador|fundadora|creador|creadora|co-fundador|cofundador/ /de/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $ENTITY /fue/ /constituido/ /por/ $SLOT_VALUE ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ /uno/ /de/ /los/ /fundadores/ /de/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ /uno/ /de/ /los/ /fundadores/ /y/ []{0,2} /de/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ []{0,2} /y/ /fundador|fundadora|creador|creadora|co-fundador|cofundador/ /de|del/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ /uno/ /de/ /los/ /fundadores/ /y/ []{0,2} /de/ /la/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ []{0,2} /y/ /fundador|fundadora|creador|creadora|co-fundador|cofundador/  /del/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /es/ /también/ /fundador|fundadora|creador|creadora|co-fundador|cofundador/  /de/ /la/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /ha/ /sido/ /fundador|fundadora|creador|creadora|co-fundador|cofundador/ /de/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $SLOT_VALUE /,/ /que|quien/ /estableció|fundó|creó/ $ENTITY ) }
+{ result: "org:founded_by", pattern: (  $ENTITY /fundador/ $SLOT_VALUE ) } 
+{ result: "org:founded_by", pattern: (  /fundador|fundadora|creador|creadora|co-fundador|cofundador/ /de/ $ENTITY /,/ $SLOT_VALUE ) } 
+{ result: "org:founded_by", pattern: (  $ENTITY /cuyo/ /fundador/ /,/ $SLOT_VALUE ) } 
+{ result: "org:founded_by", pattern: (  $ENTITY /,|-LRB-|=LRB=/ /fundado/ /por/ $SLOT_VALUE ) } 
+{ result: "org:founded_by", pattern: (  $ENTITY /,|-LRB-|=LRB=/ /fundada/ /por/ $SLOT_VALUE ) } 
+## corpus-base
+{ result: "org:founded_by", pattern: (  $ENTITY /,|-LRB-|=LRB=/ /que/ /fue/ /fundado/ /por/ $SLOT_VALUE ) } 
+{ result: "org:founded_by", pattern: (  $ENTITY /,|-LRB-|=LRB=/ /que/ /fue/ /fundada/ /por/ $SLOT_VALUE ) } 
+{ result: "org:founded_by", pattern: (  $ENTITY /,|-LRB-|=LRB=/ /que/ $SLOT_VALUE /fundó/ ) } 
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /fundó/ /el/ $ENTITY ) }
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /fundó/ /la/ $ENTITY ) }
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /,/ /de/ [] /años/ /,/ /fundó/ /el/ $ENTITY ) }
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /,/ /de/ [] /años/ /,/ /fundó/ /la/ $ENTITY ) }
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /,/ /de/ [] /años/ /,/ /en/ [] /de/ /[0-9]+/ /fundó/ /el/ $ENTITY ) }
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /,/ /de/ [] /años/ /,/ /en/ [] /de/ /[0-9]+/ /fundó/ /el/ $ENTITY ) }
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /fundó/ /la/ /compañía/ /de/ [] /,/ $ENTITY ) } 
+{ result: "org:founded_by", pattern: ( $SLOT_VALUE /fundó/ /su/ /compañía/ /de/ [] /,/ $ENTITY ) } 
+

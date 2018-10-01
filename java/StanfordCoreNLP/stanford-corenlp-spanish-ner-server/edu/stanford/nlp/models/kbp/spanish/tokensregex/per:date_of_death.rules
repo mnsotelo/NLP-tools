@@ -1,0 +1,1 @@
+{ result:"per:date_of_death" , pattern: ( $ENTITY /murió/ /en|el/? $SLOT_VALUE ) }

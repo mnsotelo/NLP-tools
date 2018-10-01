@@ -1,0 +1,53 @@
+{ result: "per:religion", pattern: ( $ENTITY /es|era|será/ /un|una/? $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es|era|será/ /de/ /religión/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es|era|será/ /de/ /la/ /religión/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es/ /un/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es/ /una/  $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /practica|practicaba|practiqué/ /la/ /fé/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /era/  $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /era/ /un/  $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /era/ /una/  $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /era/ /un/ $SLOT_VALUE /practicante/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ /un|una/  $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ /un|una/  $SLOT_VALUE /practicante/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /se/ /convirtió/ /a/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es|era/ /un/? /practicante/ /de|del/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ /un|una/? /practicant/ /de|del/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /es|era/ /un/? /practicante/ /de|del/ /la/ /religión/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /-+/ /un|una/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /-+/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /\(/ $SLOT_VALUE /\)/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /-LRB-|=LRB=/ $SLOT_VALUE /-RRB-|=RRB=/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /-LRB|=LRB=/ /un|una/ $SLOT_VALUE /-RRB-|=RRB=/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ /condenado/ /a/ [] /por/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /por/ /renegar/ /del/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /por/ /renegar/ /de|d/ /el/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /por/ /renegar/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ [] /un/ [] $SLOT_VALUE /que/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ /un/ [] $SLOT_VALUE /que/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ [] /una/ [] $SLOT_VALUE /que/ ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ /una/ [] $SLOT_VALUE /que/ ) }
+# Entre los primeros padres de la iglesia cristiana: Gregorio Nysseno; Juan Chrisostomo ; Agustín ; Tomás de Aquino
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $PERSON /,/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $PERSON /,/ $PERSON /,/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $PERSON /,/ $PERSON /,/ $PERSON /,/ $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $PERSON /;/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $PERSON /;/ $PERSON /;/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /los/ [] /padres/ /de/ /la/ /iglesia/ $SLOT_VALUE /:/ $PERSON /;/ $PERSON /;/ $PERSON /;/ $SLOT_VALUE ) }
+# por Nur Misari, líder del ex grupo secesionista musulmán 
+{ result: "per:religion", pattern: ( $ENTITY /,/ $TITLE /del/ [] /grupo/ [] $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ $TITLE /del/ /grupo/ [] $SLOT_VALUE ) }
+{ result: "per:religion", pattern: ( $ENTITY /,/ $TITLE /del/ /grupo/ [] $SLOT_VALUE ) }
+# el pasto evángelico Nelson Zavala
+{ result: "per:religion", pattern: ( /el/ $TITLE $SLOT_VALUE $ENTITY ) }
+{ result: "per:religion", pattern: ( /el/ $TITLE $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /la/ $TITLE $SLOT_VALUE $ENTITY ) }
+{ result: "per:religion", pattern: ( /la/ $TITLE $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /el/ $SLOT_VALUE [] $ENTITY ) }
+{ result: "per:religion", pattern: ( /el/ $SLOT_VALUE [] /,/ $ENTITY ) }
+{ result: "per:religion", pattern: ( /la/ $SLOT_VALUE [] $ENTITY ) }
+{ result: "per:religion", pattern: ( /la/ $SLOT_VALUE [] /,/ $ENTITY ) }

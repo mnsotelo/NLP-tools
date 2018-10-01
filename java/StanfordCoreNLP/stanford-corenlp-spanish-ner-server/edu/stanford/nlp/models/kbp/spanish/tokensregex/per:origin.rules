@@ -1,0 +1,67 @@
+# el presidente salvadoreño Mauricio Funes
+{ result:"per:origin" , pattern: ( $TITLE $SLOT_VALUE_NATIONALITY $ENTITY ) }
+{ result:"per:origin" , pattern: ( $TITLE $SLOT_VALUE_NATIONALITY /,/ ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /el/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /la/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /el/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /la/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /el/ $TITLE /del|de/ []{1,2} $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /la/ $TITLE /del|de/ []{1,2} $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /el/ $TITLE /de/ /la/ []{1,2} $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /la/ $TITLE /de/ /la/ []{1,2} $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /el/ $TITLE /del|de/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /como/ /la/ $TITLE /del|de/ $SLOT_VALUE_COUNTRY ) }
+# Pavel Nedvěd es un ex futbolista checo.     
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /un|una/ /ex/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /un|una/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /el/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /la/ $TITLE $SLOT_VALUE_NATIONALITY ) }
+# el alemán Martin Schultz
+{ result:"per:origin" , pattern: ( /[Ee]l/ $SLOT_VALUE_NATIONALITY $ENTITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ $SLOT_VALUE_NATIONALITY /,/ ) }
+{ result:"per:origin" , pattern: ( $ENTITY /=LRB=|-LRB-/ $SLOT_VALUE_NATIONALITY /=RRB=|-RRB-/ ) }
+#  Hitto nació en Siria y se naturalizó estadounidense.  
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ /=RRB=|-RRB-/ ) }
+# rseni Petrovich Yatseniuk nació el 22 de mayo de 1974 en chernivtsi, Ucrania
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /-LRB-|=LRB=/ $SLOT_VALUE_COUNTRY /-LRB-|=LRB=/ ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /-LRB-|=LRB=/ $SLOT_VALUE_COUNTRY /-LRB-|=LRB=/ ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ [] /-LRB-|=LRB=/ $SLOT_VALUE_COUNTRY /-LRB-|=LRB=/ ) }
+# Edward Hugh nació en Liverpool (Inglaterra).
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /nació/ /en/ [] /-LRB-|=LRB=/ $SLOT_VALUE_COUNTRY /-RRB-|=RRB=/ ) }
+# nacido/a
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /nacid[oa]/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /-LRB-|=LRB=/ ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ [] /,/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /en/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /en/ /[0-9][0-9][0-9][0-9]/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /,/ /que|quien/ /nacid[oa]/ /el/ /[0-9]+/ /de/ [] /de/ /[0-9][0-9][0-9][0-9]/ /en/ [] /-LRB-|=LRB=/ ) }
+# es un 
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /un/ [] /nacido/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /una/ [] /nacida/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /fue/ /un/ [] /nacido/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /fue/ /una/ [] /nacida/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /nacido/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /es/ /nacida/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /fue/ /nacido/ /en/ $SLOT_VALUE_COUNTRY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /fue/ /nacida/ /en/ $SLOT_VALUE_COUNTRY ) }
+# simple es/fue construction
+{ result:"per:origin" , pattern: ( $ENTITY /es/ $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( $ENTITY /fue/ $SLOT_VALUE_NATIONALITY ) }
+# el empresario de ascendencia judío .... 
+{ result:"per:origin" , pattern: ( /de/ /ascendencia/ $SLOT_VALUE_NATIONALITY ) }
+{ result:"per:origin" , pattern: ( /de/ /ascendencia/ $SLOT_VALUE_RELIGION ) }

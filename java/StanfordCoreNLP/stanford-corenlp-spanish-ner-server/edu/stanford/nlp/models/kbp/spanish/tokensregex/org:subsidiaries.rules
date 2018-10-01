@@ -1,0 +1,52 @@
+{eresult: "org:subsidiaries", pattern: (  $SLOT_VALUE /como/ /filial/ /de/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /como/ /una/? /organización/ /miembro/ /de/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /como/ /una|una/? []{0,2} /miembro/ /de/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /como/ /una/ /organización/ /afiliada/ /al/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /como/ /una/ /organización/ /afiliada/ /a/ /la/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /,/ /una/? /organización/ /afiliada|miembro/ /de|al/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /,/ /una/? /organización/ /afiliada|miembro/ /a/ /la/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /,/ /un/? /filial/ /de/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /y/ /otras/ /organizaciones/ /miembros|afiliadas/ /de|al/  $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /y/ /otras/ /organizaciones/ /miembros|afiliadas/ /a/ /la/  $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /y/ /otros/ /filiales/ /de/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /y/ /otros/ /miembros|afiliados/ /de|al/  $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /y/ /otros/ /miembros|afiliados/ /a/ /la/  $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  /las/ []{0,1} /organizaciones/ /miembros|afiliadas/ /de|al/ $SLOT_VALUE /son|eran/ /:/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  /las/ []{0,1} /organizaciones/ /miembros|afiliadas/ /a/ /la/ $SLOT_VALUE /son|eran/ /:/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  /las/ []{0,1} /organizaciones/ /miembros|afiliadas/ /a/ /la/ $SLOT_VALUE /son|eran/ /:/ []{2,5} $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  /las/ []{0,1} /filiales/ /miembros|afiliadas/ /de/ /la/? $SLOT_VALUE /son|eran/ /:/ []{2,5} $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /se/ /unió/ /a|con/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /se/ /unirá/ /a/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /-LRB-/ /una/ /organización/ /afiliada|miembro/ /de|al/ $ENTITY  /-RRB-/ ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /-LRB-/ /una/ /organización/ /afiliada|miembro/ /a/ /la/ $ENTITY  /-RRB-/ ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /-LRB-/ /un/ /filial/ /de/ $ENTITY /-RRB-/ ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /,/ /cuyo/ /filial|miembro/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /,/ /cuya/ /organización/ /miembro/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /filial/ /de/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /una/? /organización/ /miembro/ /de/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /un|una/? []{0,2} /miembro/ /de/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /una/ /organización/ /afiliada/ /al/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /una/ /organización/ /afiliada/ /a/ /la/ $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /adquirirá|adquirió/ /a|al/? /la/? $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /adquirirá|adquirió/ /a/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /fue|será/ /adquirido|adquirida/ /por/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /fue|será/ /adquirido|adquirida/ /por/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /,|-LRB-/ /adquirido|adquirida/ /por/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /,|-LRB-/ /adquirido|adquirida/ /por/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: ( /[Ee]scuela|[Ff]acultad|[Dd]epartamento|[Cc]olegio|[Ii]nstituto|[Cc]centro|[Dd]ivision/ /de|por/ $SLOT_VALUE /de/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: ( $ENTITY /[Ee]scuela|[Ff]acultad|[Dd]epartamento|[Cc]olegio|[Ii]nstituto|[Cc]centro|[Dd]ivision/ /de|por/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: ( $ENTITY $SLOT_VALUE /[Ee]scuela|[Ff]acultad|[Dd]epartamento|[Cc]olegio|[Ii]nstituto|[Cc]centro|[Dd]ivision/ ) }
+{ result: "org:subsidiaries", pattern: ( $SLOT_VALUE /[Ss]chool|[Dd]epartment|[Oo]ffice|[Ii]nstitute|[Cc]enter|[Dd]ivision]/ /en/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: ( $ENTITY /abrirá|abrió/ /su/ []{0,2} /[Ss]chool|[Dd]epartment|[Oo]ffice|[Ii]nstitute|[Cc]enter|[Dd]ivision]/ /de/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: ( $SLOT_VALUE /es|era|fue/ /oficina|delegación|sucursal|sección|división|sede/ /regional/ /de/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: ( $SLOT_VALUE /,|-LRB-/ /oficina|delegación|sucursal|sección|división|sede/ /regional/ /de/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /una/? /dependencia/ /de|del/ /la/?  $ENTITY ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /una/? []{0,2} /dependencia/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /es|era/ /una/ /división/ /de|del/ /la/? $ENTITY  ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /-LRB-/ /una|un/ /división|dependencia/ /de|del/ /la/? $ENTITY  /-RRB-/ ) }
+{ result: "org:subsidiaries", pattern: (  $SLOT_VALUE /-LRB-|,/ /división|dependencia/ /de/ $ENTITY /-RRB-|,/ ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /tomará/ [] /parte/ /de/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /tomará/ [] /parte/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: (  $ENTITY /tomará/ [] /parte/ /del/ $SLOT_VALUE ) }
+
+

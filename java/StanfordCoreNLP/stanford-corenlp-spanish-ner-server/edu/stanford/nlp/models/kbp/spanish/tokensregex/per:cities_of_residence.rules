@@ -1,0 +1,77 @@
+{ result:"per:cities_of_residence", pattern: ( /en/ /su/ /localidad/ /natal/ /,/ $SLOT_VALUE /,/ $ENTITY ) } 
+{ result:"per:cities_of_residence", pattern: ( /[Ee]n/ /su/ /localidad/ /natal/ []{0,2} $SLOT_VALUE /,/ $ENTITY ) } 
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /,/ /en/ /su/ /localidad/ /natal/ []{0,2} $SLOT_VALUE ) } 
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /,/ /nativo/ /de/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( /[Nn]ativo/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/,/}] /quien/ /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /en/ /su/ /nativo/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /en/ /su/ /localidad/ /natal/ /,/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /a/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /de/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result:"per:cities_of_residence", pattern: ( $SLOT_VALUE [{ner:"TITLE"}]+ $ENTITY ), weight: 1.0}
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /que|quien/ /vive/ /en/ $SLOT_VALUE ), weight: 1.0}
+{ result:"per:cities_of_residence", pattern: ( $ENTITY /,/ /que|quien/ /vive/ /en/ $SLOT_VALUE ), weight: 1.0}
+//Rules from Roth's manual patterns https://raw.githubusercontent.com/beroth/relationfactory/master/resources/manual_annotation/context_patterns2012.txt
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /se/ /crié/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /el|la/ /delegado|delegada/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /vive/ /en/  $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /vivía/ /en/  $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /,/ /viviendo/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  /[Ll]a/ /casa|residencia/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY  /tiene|tenia/ /un/ /casa|residencia/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY  /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY  /se/ /muda/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /,/ /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /pasaba/ /su/ /niñez/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /pasaba/ /su/ /niñez/ [] /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /vive/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /se/ /mudó/ /a/ /la/ /ciudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /vive/ /en/ /el|la/ /pueblo|aldea/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /vive/ /en/ /el|la/ /pueblo|aldea/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY /se/ /mudó/ /al|a/ /la/? /pueblo|aldea/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /se/ /crié/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /el|la/ /delegado|delegada/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /vive/ /en/  $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /vivía/ /en/  $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /,/ /viviendo/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  /[Ll]a/ /casa|residencia/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /tiene|tenia/ /un/ /casa|residencia/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /se/ /muda/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /,/ /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /pasaba/ /su/ /niñez/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /pasaba/ /su/ /niñez/ [] /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /vive/ /en/ /la/ /ciudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /se/ /mudó/ /a/ /la/ /ciudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /vive/ /en/ /el|la/ /pueblo|aldea/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /vive/ /en/ /el|la/ /pueblo|aldea/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: (  $ENTITY [] /se/ /mudó/ /al|a/ /la/? /pueblo|aldea/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /es/ []? /[Aa]lcalde/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /[Aa]lcalde/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /el|la/ /[Aa]lcalde/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( /[Aa]lcalde/ /de/ $SLOT_VALUE /,/ $ENTITY /,/ ) }
+{ result: "per:cities_of_residence", pattern: ( /[Aa]lcalde/ /de/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /es/ []? /[Aa]lcalde/ /de/ /la/ /[Cc]iudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /[Aa]lcalde/ /de/ /la/ /[Cc]iudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /el|la/ /[Aa]lcalde/ /de/ /la/ /[Cc]iudad/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( /[Aa]lcalde/ /de/ /la/ /[Cc]iudad/ /de/ $SLOT_VALUE /,/ $ENTITY /,/ ) }
+{ result: "per:cities_of_residence", pattern: ( /[Aa]lcalde/ /de/ /la/ /[Cc]iudad/ /de/ $SLOT_VALUE $ENTITY ) }
+# corpus-based
+{ result: "per:cities_of_residence", pattern: ( /[Cc]iudad/ /natal/ /de/ $ENTITY /=LRB=|-LRB-/ $SLOT_VALUE ) } 
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /natal/ /de/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( /[Ee]n/ /su/ /casa/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:cities_of_residence", pattern: ( /[Ee]n/ /su/ /casa/ /de/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /vive/ /desde/ /hace/ [] [] /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /de/ [] /años/ /,/ /quien/ [] /vive/ /en/  $SLOT_VALUE )}
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /de/ [] /años/ /,/ /vive/ /en/ /l[oa]s/ [] /de/  $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /de/ [] /años/ /,/ /que/ /vive/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /que/ /vive/ /en/ $SLOT_VALUE /,/ ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /que/ /vive/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /nació/ /en/ []+ /y/ /vive/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /nació/ /en/ []+ /y/ [] /vive/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /que/ /nació/ /en/ []+ /y/ /vive/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /que/ /nació/ /en/ []+ /y/ [] /vive/ /en/ $SLOT_VALUE ) }
+{ result: "per:cities_of_residence", pattern: ( $ENTITY /,/ /un|una|el|la/ []+ /que/ /vive/ /en/ $SLOT_VALUE ) }

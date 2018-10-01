@@ -1,0 +1,4 @@
+# { result:"org:politicalSLASHreligious_affiliation" ; pattern: ( $ORG_RELIGION_NESTED_MENTION )  }
+{ result:"org:politicalSLASHreligious_affiliation" ; pattern: ( /grupo/ /extremista/ $SLOT_VALUE $ENTITY )  }
+
+

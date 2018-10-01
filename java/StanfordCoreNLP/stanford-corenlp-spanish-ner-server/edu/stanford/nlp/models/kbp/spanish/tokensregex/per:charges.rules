@@ -1,0 +1,73 @@
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /imputado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /imputado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /imputada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /imputada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /condenado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /condenado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /condenada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /condenada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /buscado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /buscado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /buscada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /buscada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /accusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /accusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /:/ /accusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /accusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /accusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /accusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /accusado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /accusada/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /accusado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /accusada/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /es/ /accusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /es/ /accusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /es/ /accusado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /es/ /accusada/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /es/ /accusado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /es/ /accusada/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /fue/ /accusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /fue/ /accusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /fue/ /accusado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /fue/ /accusada/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /fue/ /accusado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /fue/ /accusada/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /,/ /acusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /,/ /acusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /,/ /acusado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /,/ /acusada/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /,/ /acusado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /,/ /acusada/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /acusado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /acusada/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /acusado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /acusada/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /acusado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /acusada/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /buscado/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /,/ /de/ []{1,2} /años/ /de/ /edad/ /,/ /buscada/ /por/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelado|aprisionado|encadenado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelada|aprisionada|encadenado/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelado|aprisionado|encadenado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelada|aprisionada|encadenado/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelado|aprisionado|encadenado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelada|aprisionada|encadenado/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelado|aprisionado|encadenado/ /bajo/ /el/ /cargo/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelada|aprisionada|encadenado/ /bajo/ /el/ /cargo/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelado|aprisionado|encadenado/ /bajo/ /el/ /cargo/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelada|aprisionada|encadenado/ /bajo/ /el/ /cargo/ /del/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelado|aprisionado|encadenado/ /bajo/ /el/ /cargo/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está/ /encarcelada|aprisionada|encadenado/ /bajo/ /el/ /cargo/ /de/ /la/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ [] $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ [] $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ [] $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /por/ /el/ /delito/ /de/ [] $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /a/ [] /años|meses/ /y/? []? /de/? /cárcel|prisión/ /por/ /los/ /delitos/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenada/ /a/ [] /años|meses/ /y/? []? /de/? /cárcel|prisión/ /por/ /los/ /delitos/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenado/ /a/ [] /años|meses/ /y/? []? /de/? /cárcel|prisión/ /por/ /el/ /delito/ /de/ $SLOT_VALUE ) }
+{ result:"per:charges" , pattern: ( $ENTITY /está|fue/ /condenada/ /a/ [] /años|meses/ /y/? []? /de/? /cárcel|prisión/ /por/ /el/ /delito/ /de/ $SLOT_VALUE ) }
+

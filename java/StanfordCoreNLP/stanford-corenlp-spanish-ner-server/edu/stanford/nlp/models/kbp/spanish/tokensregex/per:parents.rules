@@ -1,0 +1,50 @@
+{ result: "per:parents", pattern: ( $ENTITY_PER /,/ /el|la|un|una/ [] /hijo|hija|niño|niña/ /de/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY_PER /,/ [] /hijo|hija|niño|niña/ /de/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /el|la|un|una/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /el|la|un|una/ [] /hijo|hija|niño|niña/ /de|del/  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /el|la|un|una/ [] /hijo|hija|niño|niña/ /de/ /la/  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ [] /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /el|la|un|una/ /hijo|hija|niño|niña/ /de|del/  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /el|la|un|una/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]?  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ [] /hijo|hija|niño|niña/ /de/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ [] /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]?  [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /hijo|hija|niño|niña/ /de|del/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /,/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]+ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /es/ /el|la|un|una/ [] /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ [] /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /el|la|un|una/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /el|la|un|una/ [] /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /el|la|un|una/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ [] /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ [] /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ [] /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /hijo|hija|niño|niña/ /de/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /es/ /hijo|hija|niño|niña/ /de|del/ [{lemma:/la/}]? [{pos:/JJ|NN.?/}]  $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /dió/ /a/ /luz/ /a/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /dió/ /a/ /luz/ /a/ /su/ /nino|niña|hijo|hija/ /,/ $ENTITY ) }
+{ result: "per:parents", pattern: ( /hijo|hija|niño|niña/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /y|con/ /su/ /hijo|hija|niño|niña/ $ENTITY ) }
+{ result: "per:parents", pattern: ( /padre|madre|papá|mamá/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( /padre|madre|papá|mamá/ /de/ $ENTITY $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /es/ /padre|madre|papá|mamá/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /tiene|tenía/ /un|una/ /hijo|hija|niño|niña/ /llamado|llamada|,/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /la/ /madre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /,/ /la/ /madre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /\(|-LRB-/ /la/ /madre/ /de/ $ENTITY /\)|-RRB-/ ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /madre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /,/ /madre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /\(|-LRB-/ /madre/ /de/ $ENTITY /\)|-RRB-/ ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /el/ /padre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /,/ /el/ /padre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /\(|-LRB-/ /el/ /padre/ /de/ $ENTITY /\)|-RRB-/ )}
+{ result: "per:parents", pattern: ( $SLOT_VALUE /,/ /padre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /padre/ /de/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /\(|-LRB/ /padre/ /de/ $ENTITY /\)|-RRB-/ )}

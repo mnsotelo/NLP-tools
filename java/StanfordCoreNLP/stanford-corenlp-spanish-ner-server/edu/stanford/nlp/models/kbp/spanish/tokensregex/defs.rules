@@ -1,0 +1,40 @@
+# Case insensitive pattern matching (see java.util.regex.Pattern flags)
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+pos = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$PartOfSpeechAnnotation" }
+lemma = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$LemmaAnnotation" }
+tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+kbpentity = { type: "CLASS", value: "edu.stanford.nlp.ie.KBPTokensregexExtractor$Subject" }
+slotvalue = { type: "CLASS", value: "edu.stanford.nlp.ie.KBPTokensregexExtractor$Object" }
+
+$ENTITY = ([ { kbpentity:true } ]+ )
+$ENTITY_PER = ( [ { kbpentity::EXISTS } & { ner:/.*PERSON.*/ } ]+ )
+$ENTITY_ORG = ( [ { kbpentity::EXISTS } & { ner:/.*ORGANIZATION.*/ } ]+ )
+$SLOT_VALUE = ([ { slotvalue:true } ]+ )
+$SLOT_VALUE_STATE_OR_PROVINCE = ([ { slotvalue:true; ner:"STATE_OR_PROVINCE" }]+ )
+$SLOT_VALUE_NATIONALITY = ([ { slotvalue:true; ner:"NATIONALITY" } ]+ )
+$SLOT_VALUE_COUNTRY = ([ { slotvalue:true; ner:"COUNTRY" } ]+ )
+$SLOT_VALUE_ORG = ([ { slotvalue:true; ner:"ORGANIZATION" } ]+ )
+$SLOT_VALUE_CITY = ([ { slotvalue:true; ner:"CITY" } ]+ )
+$SLOT_VALUE_RELIGION = ([ {slotvalue:true; ner:"RELIGION"}]+)
+$SLOT_VALUE_CAUSE_OF_DEATH = ([ {slotvalue:true; ner:"CAUSE_OF_DEATH"}]+)
+$SLOT_VALUE_SUICIDE_VERB = ([{slotvalue:true; word:/suicidó/}])
+$SLOT_VALUE_SUICIDE_NOUN = ([{slotvalue:true; word:/suicidio/}])
+$SLOT_VALUE_MURDER_NOUN = ([{slotvalue:true; word:/asesinato|homicido/}])
+$SLOT_VALUE_ALL_CAPS = ([{slotvalue:true; word:/[A-Z]+/}])
+
+$STATE_OR_PROVINCE = ( [ { ner:"STATE_OR_PROVINCE" } ]+ )
+$CITY = ( [ { ner:"CITY" } ]+ )
+$ORG = ( [ { ner:"ORGANIZATION" } ]+ )
+$PERSON = ( [ { ner:"PERSON" } ]+ )
+$DATE = ( [ { ner:"DATE" } ]+ )
+
+$CAPITALIZED = ( [ { kbpentity::NOT_EXISTS } & {word:/[A-Z][a-z]+/} ] )
+$URL = ( [ { slotvalue::EXISTS } & ( { ner:"URL" } | { word:/(([A-Za-z]{3,9}:(?:\\?\/\\?\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\\?\/[\+~%\\?\/.\w_-]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[.\!\\?\/\\w]*))?/ } ) ] )
+#$URL = ( [ { slotvalue::EXISTS } & ( { ner:"URL" } ) ] )
+$AGE = ( [ { slotvalue::EXISTS } & { word:/[0-9]{1,2}/ } ] )
+$CRIMINAL_CHARGE = ( [ { slotvalue::EXISTS } & { ner:/.*CRIMINAL_CHARGE.*/ } ]+ )
+$TITLE = ( [ { slotvalue::EXISTS } & { ner:/.*TITLE.*/ } ]+ )
+#$TOP_TITLE = ( [ { lemma:/[eE]xecutive|[cC]hairman|[pP]resident|[cC]hief|[hH]ead|[gG]eneral|[cC][eE][oO]|[oO]fficer|[lL]eader|[vV]ice|[kK]ing|[pP]rince|[mM]anager|[mM]inister|[aA]dviser|[bB]oss|[cC]hair|[aA]mbassador|[sS]tar|[gG]overnor|[iI]nvestor|[rR]epresentative|[dD]ean|[cC]ommissioner|[cC]ommander|[mM]idfielder|[sS]peaker|[Rr]esearcher|[eE]ditor|[Cc]hancellor|[fF]ellow|[lL]eadership|[dD]iplomat|[aA]ssociate|[sS]triker|[pP]ilot|[cC]aptain|[bB]anker|[mM]ayor|[pP]remier|[pP]roducer|[aA]rchitect|[dD]esigner|[mM]ajor|[aA]dvisor|[pP]resident|[sS]enator|[sS]pecialist|[fF]aculty|[cC]hairwoman|[mM]ediator|[pP]rosecutor|[eE]ntrepreneur|[cC]reator|[sS]uperstar|[cC]ommentator|[pP]rincipal|[oO]perative|[bB]usinessman|[pP]eacekeeper|[iI]nvestigator|[cC]oordinator|[kK]night|[lL]awmaker|[jJ]ustice|[pP]ublisher|[pP]laymaker|[mM]oderator|[nN]egotiator|[Dd]irector|[Jj]ustice/ } ] )
+$TOP_TITLE = ( [ { lemma:/[Ee]jecutiv[oa]|[Pp]resident[ea]|[Jj]ef[ae]|[Cc]abeza|[Gg]eneral|[Cc][Ee][Oo]|[Oo]ficial|[Ll]ídera?|[Vv]ici[oa]|[Rr]ey|[Rr]eina|[Pp]ríncipe|[Pp]rincipesa|[Gg]erente|[Mm]inistr[ao]|[Aa]sesora?|[Ss]illa|[Ee]mbajadora?|[Ee]strella|[Gg]obernadora?|[Ii]nversora?|[Rr]epresentante|[Dd]ecanoa?|[Nn]otario|[Cc]omandante|[Cc]entrocampista|[Aa]ltavoz|[Ii]nvestigadora?|[Ee]ditora?|[Cc]ancillera?|[Cc]ompañer[oa]|[Ll]iderazg[oa]|[Dd]iplomátic[oa]|[Aa]socia|[Hh]uelguista|[Pp]ilot[oa]|[Cc]apitán|[Bb]anquer[oa]|[Mm]ayor|[Pp]rimer ministro|[Pp]rimera ministra|[Pp]roductora?|[Aa]rquitect[oa]|[Dd]iseñadora?|[Mm]ayora?|[Tt]utor|[Pp]residente|[Ss]enadora?|[Es]pecialista|[Ff]acultad|[Pp]residenta|[Mm]ediadora?|[Ff]iscal|[Ee]mpresari[oa]|[Cc]readora?|[Ss]uperestrella|[Cc]omentarista|[Dd]irectora? de escuela|[Oo]peratori[oa]|[Ee]mpresario|[Pp]acificadora?|[Ii]nvestigadora?|[Cc]oordinadora?|[Cc]aballer[oa]|[Ée]l que hace leyes|[Jj]usticia|[Ee]ditora?|[Jj]uger[oa]|[Mm]oderadora?|[Nn]egociadora?|[Dd]irectora?|[Jj]usticia|[Pp]rofesora?|[Ee]ntrenadora?/ }] )
+
+ENV.defaults.weight = 1.0

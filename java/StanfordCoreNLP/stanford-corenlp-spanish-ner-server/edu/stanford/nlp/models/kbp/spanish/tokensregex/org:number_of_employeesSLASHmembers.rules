@@ -1,0 +1,36 @@
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ $SLOT_VALUE /funcionarios/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ $SLOT_VALUE /trabajadores/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ $SLOT_VALUE /colaboradores/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ $SLOT_VALUE /personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ /más/ /de/ $SLOT_VALUE /funcionarios/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ /más/ /de/ $SLOT_VALUE /empleados/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /emplea/ /a/ /más/ /de/ $SLOT_VALUE /personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ [] /con/ /más/ /de/ $SLOT_VALUE /empleados/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ /con/ $SLOT_VALUE /empleados/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ /con/ $SLOT_VALUE /colaboradores/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ /con/ $SLOT_VALUE /trabajadores/ ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Cc]uenta/ $ENTITY /con/ /más/ /de/ $SLOT_VALUE /empleados/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ [] /con/ /una/ /plantilla/ /de/ [] $SLOT_VALUE /empleados/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ [] /con/ /una/ /plantilla/ /que/ /rondará/ $SLOT_VALUE /empleados|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ [] /con/ /una/ /plantilla/ /que/ /rondará/ $SLOT_VALUE /colaboradores/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /dispone/ /de/ /una|un/ [] /de/ $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /dispone/ /de/ /una|un/ [] /que/ /rondará/ $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /dispone/ /de/ /una|un/ [] /de/ [] $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /mantiene/ /una/ /plantilla/ /de/ $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /mantiene/ /una/ /plantilla/ /que/ /rondará/ $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /mantiene/ /una/ /plantilla/ /de/ [] $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /,/ /una/ /compañía|firma|empresa/ /de/ $SLOT_VALUE /empleados/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /,/ $SLOT_VALUE /empleados|funcionarios/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /-LRB-|\(/ $SLOT_VALUE /empleados|funcionarios/ /-RRB-|\)/ ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Ss]iendo/ /una|un/ /compañía|firma|empresa/ /de/ $SLOT_VALUE /empleados|funcionarios/ /,/ $ENTITY ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Cc]on/ /una/ /plantilla/ /de/ $SLOT_VALUE /empleados|funcionarios/ /,/ []{0,2} $ENTITY ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Cc]on/ /una/ /plantilla/ /de/ $SLOT_VALUE /empleados|funcionarios|personas/ /,/ []{0,2} $ENTITY ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Cc]on/ /una/ /plantilla/ /que/ /rondará/ $SLOT_VALUE /empleados|funcionarios|personas/ /,/ []{0,2} $ENTITY ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /tiene/ []? $SLOT_VALUE /empleados/ ) }
+# actualmente a alrededor de
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY_ORG /emplea/ /actualmente/ /a/ /alrededor/ /de/ $SLOT_VALUE /personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /cuenta/ [] /con/ /una/ /plantilla/ /alrededor/ /de/ $SLOT_VALUE /empleados|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /dispone/ /de/ /una|un/ [] /de/ /alrededor/ /de/ $SLOT_VALUE /empleados|miembros|personas/ ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Cc]on/ /una/ /plantilla/ /de/ /alrededor/ /de/ $SLOT_VALUE /empleados|funcionarios/ /,/ []{0,2} $ENTITY ) }
+{ result: "org:number_of_employees/members", pattern: ( /[Cc]on/ /una/ /plantilla/ /de/ /alrededor/ /de/ $SLOT_VALUE /empleados|funcionarios|personas/ /,/ []{0,2} $ENTITY ) }
+{ result: "org:number_of_employees/members", pattern: ( $ENTITY /tiene/ /alrededor/ /de/ $SLOT_VALUE /empleados/ ) }

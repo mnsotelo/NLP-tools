@@ -1,0 +1,40 @@
+# doesn't need to change
+{ result:"per:title", pattern: ( $TITLE $ENTITY_PER ) }
+{ result:"per:title", pattern: ( $TITLE /de|del/ [{lemma:"la" }]? $ORG /,/? $ENTITY_PER ) }
+{ result:"per:title", pattern: ( $TITLE /de/ /las/ $ORG /,/ $ENTITY_PER ) }
+{ result:"per:title", pattern: ( $TITLE [{lemma:/de/}] $ORG [{lemma:/,/}] $ENTITY_PER ) }
+//Rules *translated* from Roth's manual patterns https://raw.githubusercontent.com/beroth/relationfactory/master/resources/manual_annotation/context_patterns2012.txt
+{ result: "per:title", pattern: ( $ENTITY_PER  "fue"  /nombrado|nombrada/  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  /accedió|accedirá/ /al/ /cargo/ /de/  $TITLE ) }
+#{ result: "per:title", pattern: ( $ENTITY_PER  "was"  "nominated"  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  "fue" /elegido|elegida/ "como" $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  "fue" /elegido|elegida/ $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  ","  /un|una|el|la/  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  ","  /un|una|el|la/ [] $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  ","  /un|una|el|la/ /ex|primer|primera/  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER  "es"  "/el|la|una|un/"  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER /trabaja|trabajaba|funciona|/  "como" $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER "se" /desempeña|desempeñaba/ /como/  /el|la|un|una/  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER /era|fue/ /el|la|un|una/  $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER /era|fue/ $TITLE ) }
+{ result: "per:title", pattern: ( $ENTITY_PER /es|fue|era/ "actualmente" /el|la/ $TITLE  ) }
+{ result: "per:title", pattern: ( $ENTITY_PER /es|fue|era/ "actualmente" $TITLE  ) }
+{ result: "per:title", pattern: ( $TITLE $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( /[Ee]l/ $TITLE [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( /[Ll]a/ $TITLE [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( /al/ $TITLE [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( /del/ $TITLE [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE [{ner:"NATIONALITY"}] /del?/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE [{ner:"NATIONALITY"}] /de/ /la/ /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /de/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /de/ /las/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /del/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /de/ [] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /de/ /las/ [] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /del/ [] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /de/ [] /de/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /de/ /las/ [] /de/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE /del/ [] /de/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+{ result: "per:title", pattern: ( $TITLE [{ner:"NATIONALITY"}] /en/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+

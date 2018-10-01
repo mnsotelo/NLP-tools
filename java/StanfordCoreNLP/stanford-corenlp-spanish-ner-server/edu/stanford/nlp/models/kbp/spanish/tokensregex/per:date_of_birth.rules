@@ -1,0 +1,1 @@
+{ result:"per:date_of_birth" , pattern: ( $ENTITY /nació/ /en|el/? $SLOT_VALUE ) }

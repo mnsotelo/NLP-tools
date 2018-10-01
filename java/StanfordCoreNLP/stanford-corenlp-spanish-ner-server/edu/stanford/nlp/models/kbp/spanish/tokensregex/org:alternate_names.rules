@@ -1,0 +1,74 @@
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|es|son-LRB-|=LRB=/ /comúnmente/ /conocid(o|a|as|os)s?/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|es|son|-LRB-|=LRB=/ /más|también/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|es|son|-LRB-|=LRB=/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /comúnmente|mejor/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /comúnmente/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /-LRB-|=LRB=|,/ /ahora/ /se/ /llama/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /-LRB-|=LRB=|,/ /ahora/ /se/ /conoce/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /ahora/ /se/ /llama/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /ahora/ /se/ /conoce/ /como/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /antes/ /conocid(o|a)/ /como/  $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /alias/  $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /alias/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /alias/ /``|"/ $SLOT_VALUE /``|"/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /mejor|también|tambien/  /conocid(o|a)/ /como/  $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,/ /de/ /[0-9]{0,3}/ /años/ /,/ /es/ /mejor/ /conocid(o|a)/ /como/ []{0,2} $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /-LRB-|=LRB=/ $SLOT_VALUE /-RRB-|=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /alias/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /-LRB-|=LRB=/ $SLOT_VALUE /-RRB-|=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /iniciales/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /iniciales/ /en/ /inglés/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=|,|-LRB-/ /iniciales/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  /[lL]a/ $SLOT_VALUE  /=LRB=|-LRB-/ $ENTITY /=RRB=|-RRB-/ ) }
+{ result: "org:alternate_names", pattern: (  /[eE]l/ $SLOT_VALUE  /=LRB=|-LRB-/ $ENTITY /=RRB=|-RRB-/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /siglas/ /en/ /inglés/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=|,|-LRB-/ /siglas/ $SLOT_VALUE ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /o/ [] /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ [] /,/ /o/ $SLOT_VALUE /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /por/ /las/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE /,/ /o/ [] /,/ /por/ /las/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ [] /,/ /o/ $SLOT_VALUE /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+# Euskadi Ta Askatasuna (en español: País Vasco y Libertad )
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ /en/ /español/ /,/ $SLOT_VALUE /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ /en/ /español/ /:/ $SLOT_VALUE /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|es|son-LRB-|=LRB=/ /comúnmente/ /conocid(o|a|as|os)s?/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|es|son|-LRB-|=LRB=/ /más|también/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|es|son|-LRB-|=LRB=/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /comúnmente|mejor/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /comúnmente/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /-LRB-|=LRB=|,/ /ahora/ /se/ /llama/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /-LRB-|=LRB=|,/ /ahora/ /se/ /conoce/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /ahora/ /se/ /llama/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: ( $ENTITY /ahora/ /se/ /conoce/ /como/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /antes/ /conocid(o|a)/ /como/  $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /alias/  $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /alias/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /alias/ /``|"/ $SLOT_VALUE_ALL_CAPS /``|"/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /mejor|también|tambien/  /conocid(o|a)/ /como/  $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,/ /de/ /[0-9]{0,3}/ /años/ /,/ /es/ /mejor/ /conocid(o|a)/ /como/ []{0,2} $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /-LRB-|=LRB=/ $SLOT_VALUE_ALL_CAPS /-RRB-|=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /,|-LRB-|=LRB=/  /alias/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /-LRB-|=LRB=/ $SLOT_VALUE_ALL_CAPS /-RRB-|=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /iniciales/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /iniciales/ /en/ /inglés/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=|,|-LRB-/ /iniciales/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  /[lL]a/ $SLOT_VALUE_ALL_CAPS  /=LRB=|-LRB-/ $ENTITY /=RRB=|-RRB-/ ) }
+{ result: "org:alternate_names", pattern: (  /[eE]l/ $SLOT_VALUE_ALL_CAPS  /=LRB=|-LRB-/ $ENTITY /=RRB=|-RRB-/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /siglas/ /en/ /inglés/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=|,|-LRB-/ /siglas/ $SLOT_VALUE_ALL_CAPS ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /o/ [] /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ [] /,/ /o/ $SLOT_VALUE_ALL_CAPS /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /por/ /las/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ $SLOT_VALUE_ALL_CAPS /,/ /o/ [] /,/ /por/ /las/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ [] /,/ /o/ $SLOT_VALUE_ALL_CAPS /,/ /por/ /sus/ /siglas/ /en/ /inglés/ /=RRB=/ ) }
+
+
+# Euskadi Ta Askatasuna (en español: País Vasco y Libertad )
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ /en/ /español/ /,/ $SLOT_VALUE_ALL_CAPS /=RRB=/ ) }
+{ result: "org:alternate_names", pattern: (  $ENTITY /=LRB=/ /en/ /español/ /:/ $SLOT_VALUE_ALL_CAPS /=RRB=/ ) }

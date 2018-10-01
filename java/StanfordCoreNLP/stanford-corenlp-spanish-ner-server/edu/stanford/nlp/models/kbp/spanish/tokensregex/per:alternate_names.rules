@@ -1,0 +1,33 @@
+{ result: "per:alternate_names", pattern: ( $ENTITY [{lemma:/,|es|son-LRB-|=LRB=/}] /comúnmente/ /conocid(o|a|as|os)s?/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY [{lemma:/,|es|son|-LRB-|=LRB=/}] /más|también/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY [{lemma:/,|be|son|-LRB-|=LRB=/}] /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /comúnmente|mejor/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /comúnmente/ /conocid(o|a|as|os)/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /-LRB-|,|=LRB=/ /ahora/ /se/ /llama/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /-LRB-|,|=LRB=/ /ahora/ /se/ /conoce/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /ahora/ /se/ /llama/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /ahora/ /se/ /conoce/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /nombre|apellido/ /de/ /soltera/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE /nombre|apellido/ /de/ /soltera/ $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE [] /nombre|apellido/ /de/ /soltera/ [] $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE [] /nombre|apellido/ /de/ /soltera/ $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE /nombre|apellido/ /de/ /soltera/ [] $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE [] /nombre|apellido/ /de/ /soltera/ [] [] $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE [] [] /nombre|apellido/ /de/ /soltera/ [] $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE [] [] /nombre|apellido/ /de/ /soltera/ /name/ [] [] $ENTITY ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /,/ /nacid(o|a)/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /,/ /nacid(o|a)/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /era/ /nacid(o|a)/ /como/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /se/ /llama/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /antes/ /conocid(o|a)/ /como/  $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /alias/  $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,|-LRB-|=LRB=/  /alias/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,|-LRB-|=LRB=/  /alias/ /``|"/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,|-LRB-|=LRB=/  /mejor|también|tambien/  /conocid(o|a)/ /como/  $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,/ /de/ /[0-9]{0,3}/ /años/ /,/ /es/ /mejor/ /conocid(o|a)/ /como/ []{0,2} $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,/ /o/ $SLOT_VALUE /como/ /es/ /mejor/ /conocid(o|a)/ ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,/ /o/ $SLOT_VALUE /como/ /es/ /más/ /conocid(o|a)/ ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,/ /o/ $SLOT_VALUE /como/ /es/ /comúnmente/ /conocid(o|a)/ ) }
+# Al Shishani, nacido Tarkhan Batirashvili
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,/ /nacid[oa]/ /como/ $SLOT_VALUE /,/ ) }
+{ result: "per:alternate_names", pattern: (  $ENTITY  /,/ /nacid[oa]/ $SLOT_VALUE /,/ ) }

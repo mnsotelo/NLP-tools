@@ -1,0 +1,18 @@
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE [] /como/ /accionista/ /mayoritario/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE [] /como/ /accionista/ /determinativo/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE [] /como/ [] /accionista/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE [] /como/ /el/ /accionista/ /mayoritario/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /como/ /el/ /accionista/ /mayoritario/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /se/ /costituye|constituía|constituirá/ /como/ /el/ /accionista/ /mayoritario/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /es|era|son|será/ /proprietario/ [] /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /compré|adquirirá|adquirió/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /se/ /convierte/ /en/ /el/ [] /accionista/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /,/ [] /principal/ /accionista/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /,/ /accionista/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( /[Ee]l/ /mayor/ /accionista/ /de/ $ENTITY /es/ $SLOT_VALUE  ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /,/ /el/ /máximo/ /accionista/ /de/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /participa|participarán|participaba/ /en/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( $SLOT_VALUE /controla|controlará/ /a|al/ /la?/ $ENTITY ) }
+{ result: "org:shareholders",  pattern: ( /al/ $ENTITY /,/ /pero/ $SLOT_VALUE /tiene|posee/ /una/ /participación/  ) }
+{ result: "org:shareholders",  pattern: ( $ENTITY /,/ /donde/ $SLOT_VALUE /tiene|posee/ /una/ /participación/ /del|de/ ) }
+{ result: "org:shareholders",  pattern: ( $ENTITY /,/ /en/ /que|cual/ $SLOT_VALUE /tiene|posee/ /una/ /participación/ /del|de/ ) }

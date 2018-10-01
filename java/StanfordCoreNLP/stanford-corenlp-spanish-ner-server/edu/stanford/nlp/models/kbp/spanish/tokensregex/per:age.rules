@@ -1,0 +1,31 @@
+{ result: "per:age", pattern: ( $ENTITY /,/ $SLOT_VALUE /[,;:]/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,/ $SLOT_VALUE "." ) }
+{ result: "per:age", pattern: ( $ENTITY /,/ /edad/ $SLOT_VALUE /[,;:]/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,/ /edad/ $SLOT_VALUE "." ) }
+#{ result: "per:age", pattern: ( $ENTITY [{lemma:"be"}] $AGE /[,\.;]/ ) }
+{ result: "per:age", pattern: ( $ENTITY /tiene/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,/ /quien|que/ /tiene/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /quien|que/ /tiene/ /ya/ /hoy/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /quien|que/ /hoy/ /tiene/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /-LRB-|=LRB=/ $SLOT_VALUE /-RRB-|=RRB=/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,/ /de/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /tendrá|tendría/ $SLOT_VALUE /años|anyos?/ ) }
+#{ result: "per:age", pattern: ( $ENTITY [{lemma:/'s/}] $age [{lemma:/birthday/}] ) }
+{ result: "per:age", pattern: ( $SLOT_VALUE /cumpleaños|anyos/ /de/ $ENTITY ) }
+#{ result: "per:age", pattern: ( $ENTITY [{lemma:/turn/}] $AGE ) }
+{ result: "per:age", pattern: ( $ENTITY /cumplirá/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /va/ /a/ /cumplir/ $SLOT_VALUE /años|anyos/ ) }
+#{ result: "per:age", pattern: (  $ENTITY  "died"  "at"  $SLOT_VALUE ) }
+{ result: "per:age", pattern: ( $ENTITY /murió/ /a/ /la/ /edad/ /de/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /murió/ /con/ /solo/ $SLOT_VALUE /años|anyos/ /de/ /edad/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /murió/ /a/ /los/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /quien|que/ /murió/ /a/ /la/ /edad/ /de/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /quien|que/ /murió/ /con/ /solo/ $SLOT_VALUE /años|anyos/ /de/ /edad/ ) }
+{ result: "per:age", pattern: ( $ENTITY /ha|,/ /fallecido/ /con/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /quien|que/ /fallecido/ /con/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( /en/ /que/ /muere/ $ENTITY /a/ /la/ /edad/ /de/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /falleció|murió/ /a/ /la/ /edad/ /de/ $SLOT_VALUE /años|anyos/ ) }
+{ result: "per:age", pattern: ( $ENTITY /murió|falleció/ /el/ []{0,2} /de/ [] /a/ /la/ /edad/ /de/ $SLOT_VALUE ) }
+{ result: "per:age", pattern: ( $ENTITY /edad/ $SLOT_VALUE ) }
+{ result: "per:age", pattern: ( $ENTITY /de/ $SLOT_VALUE /años|anyos/ /de/ /edad/ ) }
+{ result: "per:age", pattern: ( $ENTITY /,/ /un|una|el|la/ []{0,2} /a/ $SLOT_VALUE /años|anyos/ /de/ /edad/ )}

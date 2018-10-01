@@ -1,0 +1,11 @@
+{ result: "org:website", pattern: (  $ENTITY  /[:,]/  $SLOT_VALUE ) }
+{ result: "org:website", pattern: ( /el|la/ /sitio|dirección|página/ /web/ /de|del/ $ENTITY  /[:,]/  $SLOT_VALUE ) } 
+{ result: "org:website", pattern: ( $ENTITY /sitio|dirección|página/ /web/ /[:,]/?  $SLOT_VALUE ) } 
+{ result: "org:website", pattern: ( $ENTITY /\(|--|:/ /sitio|dirección|página/ /web/ $SLOT_VALUE ) } 
+{ result: "org:website", pattern: ( $ENTITY /\(|--|:/ /sitio|dirección|página/ $SLOT_VALUE ) } 
+{ result: "org:website", pattern: ( $ENTITY /\(|-LRB-|=LRB=/ $SLOT_VALUE /\)|-RRB-|=RRB=/ ) }
+{ result: "org:website", pattern: ( $SLOT_VALUE $ENTITY ) }
+{ result: "org:website", pattern: ( $ENTITY $SLOT_VALUE ) }
+{ result: "org:website" , pattern: ( /portal/ $SLOT_VALUE /,/? /el/? /sitio/ /oficial/ /de|del/ []{1,3} $ENTITY ) }
+{ result: "org:website" , pattern: ( /portal/ $SLOT_VALUE /,/? /el|la/? /sitio|página/ /web/? /oficial/? /de|del/ []{0,3} $ENTITY ) }
+{ result: "org:website", pattern: ( $ENTITY /,|-LRB-|=LRB=/ /portal/ []? $SLOT_VALUE /,|-RRB-|=RRB=/ ) }

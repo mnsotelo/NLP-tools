@@ -1,0 +1,45 @@
+{ result: "per:schools_attended", pattern: ( $ENTITY /tiene/ /un/ /doctorado/ /en/ []{1,4} /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /tiene/ /un/ /doctorado/ /en/ []{1,4} /del/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /tiene/ /una/ /maestría/ /en/ []{1,4} /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /tiene/ /una/ /maestría/ /en/ []{1,4} /del/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /recibió/ /su/ /doctorado/ /en/ []{1,4} /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /recibió/ /su/ /doctorado/ /en/ []{1,4} /del/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /recibió/ /su/ /maestría/ /en/ []{1,4} /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /recibió/ /su/ /maestría/ /en/ []{1,4} /del/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudió/ /en/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudió/ /en/ /el/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudió/ /en/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /cuando/ [] /estudiaba/ /en/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /cuando/ [] /estudiaba/ /en/ /el/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudiaba/ /en/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudiaba/ /en/ /el/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudiaba/ /en/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /se/ /graduó/ /del/ []{1,4} /en/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /estudiante/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudiante/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /un/ /estudiante/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /es/ /un/ /estudiante/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /es/ /un/ /estudiante/ /de/ []{1,3} /en/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /estudiante/ /de/ /la/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudiante/ /de/ /la/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /estudiante/ /del/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /un/ /estudiante/ /de/ /la/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /un/ /estudiante/ /del/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( /estudiante/ /de/ /la/ [] $SLOT_VALUE [] $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /estudiante/ /del/ [] $SLOT_VALUE [] $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /estudiante/ /de/ /la/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /estudiante/ /del/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /se/ /trasladó/ /a/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /un/ /graduado/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /es/ /un/ /graduado/ /de/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /es/ /un/ /graduado/ /de/ []{1,3} /en/ /la/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /graduado/ /de/ /la/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /graduado/ /de/ /la/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /graduado/ /del/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /un/ /graduado/ /de/ /la/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /,/ /un/ /graduado/ /del/ [] $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( /graduado/ /de/ /la/ [] $SLOT_VALUE [] $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /graduado/ /del/ [] $SLOT_VALUE [] $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /graduado/ /de/ /la/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /graduado/ /del/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:schools_attended", pattern: ( /pupitre/ /de/ $ENTITY /en/ /el/ []{0,3} /colegio/ /de/ $SLOT_VALUE ) }

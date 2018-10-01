@@ -1,0 +1,840 @@
+#e batch one
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ $SLOT_VALUE_ORG /,/ $ENTITY ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ /el|la/ [{ner:"TITLE"}] /de|del|d/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:"TITLE"}] /de|del|d/ /el|la/? $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /se/ /unió/ /a/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /se/ /unió/ /a/ /la|el/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( [{ner:/TITLE/}] /de/ $SLOT_VALUE_ORG /,/ $ENTITY )}
+{ result: "per:employee_of", pattern: ( $SLOT_VALUE_ORG [{ner:/TITLE/}] /,/ $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [{ner:/TITLE/}] /de/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $SLOT_VALUE_ORG [{ner:/TITLE/}] $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $SLOT_VALUE_ORG [{tag:/NN[SP]?|JJ/}] [{ner:/TITLE/}] $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:/TITLE/}] /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] [{ner:/TITLE/}] /del|d|de/ /el|la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /de|d|del/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [{ner:"TITLE"}] "," $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [{ner:"TITLE"}] /de|del|d/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [{ner:"TITLE"}] /de|del|d/ /el|la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /una?/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /fue/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /fue/ /el|la/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0} 
+{ result: "per:employee_of", pattern: ( $ENTITY /fue/ /una?/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /era/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /era/ /una?/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+## batch two
+# Kim Carr se unirá al gabinete como ministro de Innovación
+{ result: "per:employee_of", pattern: ( $ENTITY /se/ /unirá/ /al?/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /se/ /unirá/ /a/ /la/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ /que/ /se/ /unirá/ /a/ /la/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ /que/ /se/ /unirá/ /al/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /que/ /se/ /unirá/ /a/ /la/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /que/ /se/ /unirá/ /al/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /que/ /se/ /unió/ /a/ /la/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /que/ /se/ /unió/ /al/ $SLOT_VALUE_ORG /como/ [{ner:"TITLE"}]), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ /el|la/ [{ner:"TITLE"}] /de|del|d/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:"TITLE"}] /de|d/ /la/ /compañía/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:"TITLE"}] /de|d/ /la/ /agencia/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:"TITLE"}] /de|d/ /la/ /compañía/ [{pos:/JJ/}]+ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:"TITLE"}] /de|d/ /la/ /agencia/ [{pos:/JJ/}]+ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /se/ /unió/ /a/ /la/ /compañía/ $SLOT_VALUE_ORG ) , weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /se/ /unió/ /a/ /la/ /agencia/ $SLOT_VALUE_ORG ) , weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( [{ner:/TITLE/}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG /,/ $ENTITY )}
+{ result: "per:employee_of", pattern: ( [{ner:/TITLE/}] /del|d|de/ /el|la/ ?[{pos:/NN|JJ/}] $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /,/ [{ner:/TITLE/}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] [{ner:/TITLE/}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}]  $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ [{ner:"TITLE"}] /de|del|d/ /el|la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /una?/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /fue/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /fue/ /el|la/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /fue/ /una?/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /era/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /era/ /una?/ [{ner:"TITLE"}] /del|d|de/ /el|la/? [{pos:/NN|JJ/}] $SLOT_VALUE_ORG ), weight: 1.0}
+
+
+## pass 3
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG /gerente/ $ENTITY  ) }
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG /administrador/ $ENTITY  ) }
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG /director/ $ENTITY  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un|el/ /gerente/ /de/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un|el/ /administrador/ /de/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un|el/ /gerente/ /del/ /equipo/ /,/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un|el/ /gerente/ /del/ /equipo/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /gerente/ /de/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /administrador/ /de/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /gerente/ /del/ /equipo/ /,/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /gerente/ /del/ /equipo/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG /entrenador/ $ENTITY  ) }
+{ result: "per:employee_of", pattern: ( /[Ee]ntrenadora?/ /del?/ $SLOT_VALUE_ORG /,/ $ENTITY ) }
+{ result: "per:employee_of", pattern: ( /[Ee]ntrenadora?/ /de|d/ $SLOT_VALUE_ORG /,/ $ENTITY ) }
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG "coach"  $ENTITY  ) }
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG /es/  /entrenadora?/ /del?/ $ENTITY  ) }
+{ result: "per:employee_of", pattern: (  $SLOT_VALUE_ORG /fue/ /entrenadora?/ /del?/ $ENTITY  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /desempeñó/ /como/ [pos:/NN|JJ/] /de|del|por|para/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /abandona/ /al?/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /abandonó/ /a/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /abandonó/ /a/ /la/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY  "," "miembro" /de|d|del/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY  "," "miembro" /de/ /la/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY  "," /un/ "miembro" /de/ /la/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un/ "miembro" /de/ /la/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un/ "miembro" /del/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /es/ /un/ "miembro" /del/ [pos:/NN|JJ/]+ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /fue/ /un/ "miembro" /de/ /la/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /fue/ /un/ "miembro" /del/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /fue/ /un/ "miembro" /del/ [pos:/NN|JJ/]+ $SLOT_VALUE_ORG ) }
+
+## to debug
+{ result: "per:employee_of", pattern: (  $ENTITY /trabaja/ /para/  $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /trabaja/ /para/ /el|la/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /trabaja/ /para/ /el|la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /trabaja/ /para/ /el|la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /sigue|va/ /trabajando/ /para/ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /sigue|va/ /trabajando/ /para/ /el|la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG  ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /comenzó/ /a/ /trabajar/ /para/ /el|la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /estaba/ /empleado|empleada/ /por/ /el|la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /estaba/ /emplead[oa]/ /por/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /estaba/ /empleado|empleada/ /por/ /el|la/ [{pos:/NN|JJ/}]+  $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY  /,/  /un|una/ /emplead[oa]/ /de|para/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: ( $ENTITY  /,/  /un|una/ /trabajadora?/ /de|para/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: ( $ENTITY  /un|una/ /emplead[oa]/ /de|para/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY  /un|una/ /trabajador|trabajora/ /de|para/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  /[Ee]mpleado|[Ee]mpleada/ /de|para/ $SLOT_VALUE_ORG /,/ $ENTITY ) }
+{ result: "per:employee_of", pattern: ( /[Tt]rabajador|[Tt]rabajadora/ /de|para/ $SLOT_VALUE_ORG /,/ $ENTITY ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /fue/ /contratad[oa]/ /por/ $SLOT_VALUE_ORG ) }
+{ result: "per:employee_of", pattern: (  $ENTITY /ha/ /sido/ /contratad[oa]/ /por/ $SLOT_VALUE_ORG ) }
+
+// JB created rules from ngrams - /scr/nlp/data/tackbp2015/data/job_per_org_analysis/3-gram-per-title-org-patterns.txt-filtered-201
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "director" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "directora" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "director" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "directora" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "analista" /de/ [] /al/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "portavoz" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vocero" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vocera" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "economista" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "economista" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "economista" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "proprietario" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "proprietario" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "proprietario" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /del/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /de/ /la/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "CEO" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "director" "general" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "fundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefe" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefa" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefe" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefa" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefe" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefa" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "strategia" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /editora?/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /editora?/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /editora?/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /comandante/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /comandante/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /comandante/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rector" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rector" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rector" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rectora" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rectora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rectora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "ministro" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "ministro" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "ministro" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "lídera" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "lídera" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "lídera" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "secretario" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "secretario" "por" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastor" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastora" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "VP" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "VP" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidente" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidenta" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+
+// JB created rules from ngrams - /scr/nlp/data/tackbp2015/data/job_per_org_analysis/3-gram-per-title-org-patterns.txt-filtered-201
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "director" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "directora" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "director" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "directora" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "analista" /de/ [] /al/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "portavoz" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "vocero" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "vocera" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "economista" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "economista" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "economista" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "proprietario" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "proprietario" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "proprietario" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "dueño" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "dueño" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "dueño" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "dueño" /del/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "dueño" /de/ /la/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "CEO" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "director" "general" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "fundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "jefe" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "jefa" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "jefe" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "jefa" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "jefe" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "jefa" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "strategia" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /editora?/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /editora?/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /editora?/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /comandante/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /comandante/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /comandante/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "rector" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "rector" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "rector" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "rectora" "de" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "rectora" "del" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "rectora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "ministro" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "ministro" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "ministro" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "lídera" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "lídera" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "lídera" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "professor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "professor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "professora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "professora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "secretario" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "secretario" "por" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "pastor" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "pastora" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "pastor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "pastora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "pastor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "pastora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "VP" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "VP" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "vicepresidente" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "vicepresidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "vicepresidenta" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" "vicepresidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+
+// JB created rules from ngrams - /scr/nlp/data/tackbp2015/data/job_per_org_analysis/3-gram-per-title-org-patterns.txt-filtered-201
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "director" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "directora" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "director" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "directora" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "analista" /de/ [] /al/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "portavoz" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "vocero" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "vocera" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "economista" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "economista" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "economista" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "proprietario" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "proprietario" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "proprietario" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "dueño" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "dueño" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "dueño" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "dueño" /del/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "dueño" /de/ /la/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "CEO" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "director" "general" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "fundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "jefe" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "jefa" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "jefe" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "jefa" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "jefe" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "jefa" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "strategia" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ /editora?/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ /editora?/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ /editora?/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ /comandante/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ /comandante/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ /comandante/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "rector" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "rector" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "rector" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "rectora" "de" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "rectora" "del" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "rectora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "ministro" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "ministro" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "ministro" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "lídera" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "lídera" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "lídera" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "professor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "professor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "professora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "professora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "secretario" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "secretario" "por" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "pastor" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "pastora" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "pastor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "pastora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "pastor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "pastora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "VP" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "VP" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "vicepresidente" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "vicepresidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "vicepresidenta" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "que" "es" /el|la/ "vicepresidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+
+// JB created rules from ngrams - /scr/nlp/data/tackbp2015/data/job_per_org_analysis/3-gram-per-title-org-patterns.txt-filtered-201
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "director" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "directora" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "director" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "directora" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "analista" /de/ [] /al/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "portavoz" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "vocero" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "vocera" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "economista" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "economista" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "economista" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "proprietario" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "proprietario" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "proprietario" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "dueño" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "dueño" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "dueño" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "dueño" /del/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "dueño" /de/ /la/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "CEO" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "director" "general" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "fundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "jefe" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "jefa" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "jefe" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "jefa" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "jefe" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "jefa" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "strategia" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ /editora?/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ /editora?/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ /editora?/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ /comandante/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ /comandante/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ /comandante/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "rector" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "rector" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "rector" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "rectora" "de" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "rectora" "del" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "rectora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "ministro" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "ministro" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "ministro" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "lídera" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "lídera" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "lídera" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "professor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "professor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "professora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "professora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "secretario" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "secretario" "por" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "pastor" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "pastora" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "pastor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "pastora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "pastor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "pastora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "VP" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "VP" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "vicepresidente" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "vicepresidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "vicepresidenta" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY /es/ /el|la/ "vicepresidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+
+// JB created rules from ngrams - /scr/nlp/data/tackbp2015/data/job_per_org_analysis/3-gram-per-title-org-patterns.txt-filtered-201
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "director" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "directora" /de|d|del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "director" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "directora" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "analista" /de/ [] /al/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "portavoz" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "vocero" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "vocera" /para/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "economista" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "economista" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "economista" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "proprietario" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "proprietario" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "proprietario" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "dueño" /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "dueño" /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "dueño" /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "dueño" /del/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "dueño" /de/ /la/ [] $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "CEO" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "director" "general" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "fundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "jefe" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "jefa" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "jefe" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "jefa" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "jefe" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "jefa" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "strategia" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] /editora?/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] /editora?/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] /editora?/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] /comandante/ /de/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] /comandante/ /del/ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] /comandante/ /de/ /la/ $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "rector" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "rector" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "rector" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "rectora" "de" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," [] "rectora" "del" $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," [] "rectora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "ministro" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "ministro" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "ministro" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "lídera" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "lídera" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "lídera" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "professor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "professor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "professora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "professora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "secretario" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "secretario" "por" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "pastor" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "pastora" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "pastor" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "pastora" "del" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "pastor" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "pastora" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "VP" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "VP" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "vicepresidente" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "vicepresidente" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "vicepresidenta" "de" $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [] "vicepresidenta" "de" "la" $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( "presidente" /de|del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidenta" /de|del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidente" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidenta" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" /de|d|del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "directora" /de|d|del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" /de/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "directora" /de/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "analista" /de/ [] /al/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "portavoz" /para/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vocero" /para/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vocera" /para/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /de/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /de/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /del/ [] $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ /la/ [] $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "CEO" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" "general" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "fundador" /de|del/ /la/? $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "strategia" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /de/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /de/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /de/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /del/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /de/ /la/ $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( "rector" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rector" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rector" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rectora" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}{ result: "per:employee_of", pattern: ( "rectora" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}{ result: "per:employee_of", pattern: ( "rectora" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professor" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professor" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professora" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professora" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "secretario" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "secretario" "por" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "del" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "VP" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "VP" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidente" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidente" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidenta" "de" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidenta" "de" "la" $SLOT_VALUE_ORG $ENTITY ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( "presidente" /de|del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidenta" /de|del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidente" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidenta" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidente" /de|del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidenta" /de|del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidente" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidenta" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" /de|d|del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "directora" /de|d|del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" /de/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "directora" /de/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "analista" /de/ [] /al/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "analista" /de/ [] /a/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "portavoz" /para/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vocero" /para/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vocera" /para/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /de/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /de/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /del/ [] $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ /la/ [] $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "CEO" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" "general" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "fundador" /de|del/ /la/? $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "fundadora" /de|del/ /la/? $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "cofundador" /de|del/ /la/? $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "cofundadora" /de|del/ /la/? $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "strategia" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "strategia" [pos:/JJ/] "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /de/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /de/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /de/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /del/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /de/ /la/ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( "rector" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rector" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rector" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rectora" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}{ result: "per:employee_of", pattern: ( "rectora" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}{ result: "per:employee_of", pattern: ( "rectora" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professor" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professor" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professora" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professora" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "secretario" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "secretario" "por" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "del" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "VP" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "VP" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidente" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidente" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidenta" "de" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidenta" "de" "la" $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+
+// JB created rules from ngrams - /scr/nlp/data/tackbp2015/data/job_per_org_analysis/3-gram-per-title-org-patterns.txt-filtered-201
+{ result: "per:employee_of", pattern: ( "presidente" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidenta" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidente" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "presidenta" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidente" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidenta" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidente" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( [pos:/JJ/] "presidenta" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" /de|d|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "directora" /de|d|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "directora" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "analista" /de/ [] /al/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "analista" /de/ [] /a/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "portavoz" /para/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vocero" /para/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vocera" /para/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "economista" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "proprietario" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /del/ [] [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "dueño" /de/ /la/ [] [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "CEO" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "director" "general" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "fundador" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "fundadora" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "cofundador" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "cofundadora" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefe" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "jefa" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "strategia" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "strategia" [pos:/JJ/] "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /editora?/ /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /comandante/ /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( "rector" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rector" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rector" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "rectora" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}{ result: "per:employee_of", pattern: ( "rectora" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}{ result: "per:employee_of", pattern: ( "rectora" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "ministro" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "lídera" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professor" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professor" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professora" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "professora" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "secretario" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "secretario" "por" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastor" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "pastora" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "VP" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "VP" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidente" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidente" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidenta" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( "vicepresidenta" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG "," $ENTITY ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidente" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidenta" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidente" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "presidenta" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidente" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidenta" /de|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidente" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," [pos:/JJ/] "presidenta" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "director" /de|d|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "directora" /de|d|del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "director" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "directora" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "analista" /de/ [] /al/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "analista" /de/ [] /a/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "portavoz" /para/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vocero" /para/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vocera" /para/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "economista" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "economista" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "economista" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "proprietario" /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "proprietario" /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "proprietario" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /del/ [] [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "dueño" /de/ /la/ [] [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "CEO" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "director" "general" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "fundador" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "fundadora" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "cofundador" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "cofundadora" /de|del/ /la/? [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefe" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefa" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefe" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefa" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefe" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "jefa" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "strategia" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "strategia" [pos:/JJ/] "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /editora?/ /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /editora?/ /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /editora?/ /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /comandante/ /de/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /comandante/ /del/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," /comandante/ /de/ /la/ [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rector" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rector" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rector" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "rectora" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," "rectora" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}{ result: "per:employee_of", pattern: ( $ENTITY "," "rectora" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "ministro" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "ministro" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "ministro" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "lídera" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "lídera" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "lídera" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professor" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professor" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professora" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "professora" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "secretario" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "secretario" "por" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastor" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastora" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastor" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastora" "del" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastor" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "pastora" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "VP" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "VP" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidente" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidente" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidenta" "de" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( $ENTITY "," "vicepresidenta" "de" "la" [{pos:/NN|JJ/}]+ $SLOT_VALUE_ORG ), weight: 1.0}
+{ result: "per:employee_of", pattern: ( /[Ee]l/ [{ner:"TITLE"}] [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( /[Ll]a/ [{ner:"TITLE"}] [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( /al/ [{ner:"TITLE"}] [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( /del/ [{ner:"TITLE"}] [{ner:"NATIONALITY"}] $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] [{ner:"NATIONALITY"}] /del?/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] [{ner:"NATIONALITY"}] /de/ /la/ /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ /las/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /del/ [] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ [] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ /las/ [] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /del/ [] [{ner:"NATIONALITY"}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ [] /de/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /de/ /las/ [] /de/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] /del/ [] /de/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+{ result: "per:employee_of", pattern: ( [{ner:"TITLE"}] [{ner:"NATIONALITY"}] /en/ [{ner:/COUNTRY|STATE_OR_PROVINCE|CITY/}] /,/ $ENTITY_PER  ) }
+

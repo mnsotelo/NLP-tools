@@ -1,0 +1,94 @@
+{ result:"per:countries_of_residence", pattern: ( /en/ /su/ /país/ /natal/ /,/ $SLOT_VALUE /,/ $ENTITY ) } 
+{ result:"per:countries_of_residence", pattern: ( /[Ee]n/ /su/ /país/ /natal/ []{0,2} $SLOT_VALUE /,/ $ENTITY ) } 
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /,/ /en/ /su/ /localidad/ /natal/ []{0,2} $SLOT_VALUE ) } 
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /,/ /nativo/ /de/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( /[Nn]ativo/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:countries_of_residence", pattern: ( $ENTITY [{lemma:/,/}] /quien/ /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /en/ /su/ /nativo/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /en/ /su/ /país/ /natal/ /,/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /a/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /de/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result:"per:countries_of_residence", pattern: ( $SLOT_VALUE [{ner:"TITLE"}]+ $ENTITY ), weight: 1.0}
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /que|quien/ /vive/ /en/ $SLOT_VALUE ), weight: 1.0}
+{ result:"per:countries_of_residence", pattern: ( $ENTITY /,/ /que|quien/ /vive/ /en/ $SLOT_VALUE ), weight: 1.0}
+//Rules from Roth's manual patterns https://raw.githubusercontent.com/beroth/relationfactory/master/resources/manual_annotation/context_patterns2012.txt
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /se/ /crié/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /el|la/ /delegado|delegada/ /de/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /vive/ /en/  $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /vivía/ /en/  $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /,/ /viviendo/ /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  /[Ll]a/ /casa|residencia/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY  /tiene|tenia/ /un/ /casa|residencia/ /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY  /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY  /se/ /muda/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /,/ /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /pasaba/ /su/ /niñez/ /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /pasaba/ /su/ /niñez/ [] /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /se/ /crié/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /el|la/ /delegado|delegada/ /de/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /vive/ /en/  $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /vivía/ /en/  $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /,/ /viviendo/ /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  /[Ll]a/ /casa|residencia/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /tiene|tenia/ /un/ /casa|residencia/ /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /se/ /muda/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /,/ /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /pasaba/ /su/ /niñez/ /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY [] /pasaba/ /su/ /niñez/ [] /en/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $SLOT_VALUE /ciudadano|ciudadana/ $ENTITY  ) }
+{ result: "per:countries_of_residence", pattern: (  $SLOT_VALUE /es/ /ciudadano|ciudadana/ /de/ $ENTITY  ) }
+{ result: "per:countries_of_residence", pattern: (  $SLOT_VALUE "," /hogar/ /de/  $ENTITY  ) }
+{ result: "per:countries_of_residence", pattern: (  $SLOT_VALUE ","  "hometown"  "of"  $ENTITY  ) }
+{ result: "per:countries_of_residence", pattern: (  $SLOT_VALUE /ciudadano/ ","  $ENTITY  ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /es/ /un/ /ciudadano/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY "," /un/ /ciudadano/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: (  $ENTITY /un/  $SLOT_VALUE /ciudadano/ ) }
+# el primer ministro de Nueva Zelanda, John Key
+{ result: "per:countries_of_residence", pattern: ( $ENTITY /,/ /de|from/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Pp]rimer/ /[Mm]inistro/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /ex/ /[Pp]rimer/ /[Mm]inistro/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Pp]residente/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /ex/ /[Pp]residente/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[j|J]eque/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Ss]ultán/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /La|la/ /[Rr]eina/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Rr]ey/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Gg]ran/ /[Dd]uque/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Gg]obernador/ [] /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /ministro/ []? /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Pp]residente/ /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /ex/ /[Pp]residente/ /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Gg]obernador/ /[Pp]residente/ /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /ministro/ []? /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( $ENTITY /,/ /de|from/ $SLOT_VALUE ) }
+{ result: "per:countries_of_residence", pattern: ( /[Pp]rimer/ /[Mm]inistro/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /ex/ /[Pp]rimer/ /[Mm]inistro/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Pp]residente/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /ex/ /[Pp]residente/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[j|J]eque/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Ss]ultán/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Rr]eina/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Rr]ey/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Gg]ran/ /[Dd]uque/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Gg]obernador/ [] /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /ministro/ []? /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Pp]residente/ /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /ex/ /[Pp]residente/ /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /[Gg]obernador/ /[Pp]residente/ /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /ministro/ []? /de|del/ []{1,3} /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Pp]rimer/ /[Mm]inistro/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /ex/ /[Pp]rimer/ /[Mm]inistro/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Pp]residente/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /ex/ /[Pp]residente/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[j|J]eque/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /[Ss]ultán/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /La|la/ /[Rr]eina/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Rr]ey/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Gg]ran/ /[Dd]uque/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /[Gg]obernador/ [] $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /El|el/ /ministro/ []? $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:countries_of_residence", pattern: ( /el|El/ /candidato/ [] $SLOT_VALUE /,/? $ENTITY ) }

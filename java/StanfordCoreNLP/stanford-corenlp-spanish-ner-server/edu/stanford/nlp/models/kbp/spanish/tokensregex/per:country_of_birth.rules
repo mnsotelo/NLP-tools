@@ -1,0 +1,56 @@
+{ result: "per:country_of_birth", pattern: (  $ENTITY /nació/ /en/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY /nació|nacido|nacida/ /en/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY /había/ /nacido/ /en/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY  /,/ /nació|nacido|nacida/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY /procede/ /de/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY /,/ /procede/ /de/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY /naciera/ /en/ $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY  /había/ /nacido/  []{0,6}  /en/  $SLOT_VALUE ) }
+{ result: "per:country_of_birth", pattern: (  $SLOT_VALUE /de/ /origen/ /,/  $ENTITY ) }
+{ result: "per:country_of_birth", pattern: (  $ENTITY /fue|era|es/ $SLOT_VALUE /de/ /origen/ ) }
+{ result: "per:country_of_birth", pattern: (  $SLOT_VALUE /fue|era|es/ /el/ /lugar/ /de/ /nacimiento/ /de|del/ []{0,2} $ENTITY ) }
+# José Luis Chilavert nació el 27 de Julio de 1965 en Luque, Paraguay.     
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /el/ [] /de/ [] /de/ /[0-9]+/ /en/ [] /,/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /el/ [] /de/ [] /de/ /[0-9]+/ /en/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ $CITY /,/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ $CITY /-LRB-/ $SLOT_VALUE /-RRB-/ ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ $CITY /=LRB=/ $SLOT_VALUE /=RRB=/ ) } 
+# Achmed, nació en Suecia así que es sueco.  
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /nació/ /en/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /nació/ /en/ $CITY /,/ $SLOT_VALUE ) } 
+# Alcina Fénélus nació en el extremo noroccidental de Haití
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ /el/ [] [] /de/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ /el/ [] /de/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ /la/ [] [] /de/ $SLOT_VALUE ) } 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ /la/ [] /de/ $SLOT_VALUE ) }
+#  Rudolf Hess como es más conocido, nació en 1894 en Alejandría en Egipto,
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /como/ /es/ /más/ /conocido/ /,/ /nació/ /en/ $SLOT_VALUE ) }
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /como/ /es/ /mejor/ /conocido/ /,/ /nació/ /en/ $SLOT_VALUE ) }
+#  Meiling, quien nació en la ciudad china de Shandon
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /quien/ /nació/ /en/ /la/ /ciudad/ $SLOT_VALUE /de/ $CITY ) }
+# Juan Medina nació en Santo Domingo, República Dominicana (1948). 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /nació/ /en/ $STATE_OR_PROVINCE /,/ $SLOT_VALUE ) }    
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /quien/ /nació/ /en/ $STATE_OR_PROVINCE /,/ $SLOT_VALUE ) }   
+#  Onyango, de 69 años, nació en Kenia, 
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /de/ [] /años/ /,/ /nació/ /en/  $SLOT_VALUE ) }
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /de/ [] /años/ /de/ /edad/ /,/ /nació/ /en/  $SLOT_VALUE ) }      
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /el/ /presidente/ /de/ $SLOT_VALUE ) }
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /el/ /ex/ /presidente/ /de/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /la/ /presidenta/ /de/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /la/ /ex/ /presidenta/ /de/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /presidente/ /de/ $SLOT_VALUE ) }
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /ex/ /presidente/ /de/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( /[Ee]l/ /presidente/ /de/ $SLOT_VALUE /,/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( /[Ee]l/ /ex/ /presidente/ /de/ $SLOT_VALUE /,/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( /[Ll]a/ /presidenta/ /de/ $SLOT_VALUE /,/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( /[Ll]a/ /ex/ /presidenta/ /de/ $SLOT_VALUE /,/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /el/ /presidente/ /de/ /l[oa]s/ $SLOT_VALUE ) }
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /el/ /ex/ /presidente/ /de/ /l[oa]s/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /la/ /presidenta/ /de/ /l[oa]s/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /la/ /ex/ /presidenta/ /de/ /l[oa]s/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /presidente/ /de/ /l[oa]s/ $SLOT_VALUE ) }
+{ result:"per:country_of_birth" , pattern: ( $ENTITY /,/ /ex/ /presidente/ /de/ /l[oa]s/ $SLOT_VALUE )}
+{ result:"per:country_of_birth" , pattern: ( /[Ee]l/ /presidente/ /de/ $SLOT_VALUE /,/ /l[oa]s/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( /[Ee]l/ /ex/ /presidente/ /de/ $SLOT_VALUE /,/ /l[oa]s/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( /[Ll]a/ /presidenta/ /de/ /l[oa]s/ $SLOT_VALUE /,/ $ENTITY )}
+{ result:"per:country_of_birth" , pattern: ( /[Ll]a/ /ex/ /presidenta/ /de/ /l[oa]s/ $SLOT_VALUE /,/ $ENTITY )}

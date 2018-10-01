@@ -1,0 +1,88 @@
+{ result:"per:stateorprovinces_of_residence", pattern: ( /en/ /su/ /región|zona|estado/ /natal/ /,/ $SLOT_VALUE /,/ $ENTITY ) } 
+{ result:"per:stateorprovinces_of_residence", pattern: ( /[Ee]n/ /su/ /región|zona|estado/ /natal/ []{0,2} $SLOT_VALUE /,/ $ENTITY ) } 
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /,/ /en/ /su/ /localidad/ /natal/ []{0,2} $SLOT_VALUE ) } 
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /,/ /nativo/ /de/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( /[Nn]ativo/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( /[Nn]atal/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /,/ /quien/ /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /en/ /su/ /nativo/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /en/ /su/ /región|zona|estado/ /natal/ /,/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /a/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /de/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $SLOT_VALUE [{ner:"TITLE"}]+ $ENTITY ), weight: 1.0}
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /que|quien/ /vive/ /en/ $SLOT_VALUE ), weight: 1.0}
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /,/ /que|quien/ /vive/ /en/ $SLOT_VALUE ), weight: 1.0}
+//Rules from Roth's manual patterns https://raw.githubusercontent.com/beroth/relationfactory/master/resources/manual_annotation/context_patterns2012.txt
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /se/ /crié/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /el|la/ /delegado|delegada/ /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /vive/ /en/  $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /vivía/ /en/  $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /,/ /viviendo/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  /[Ll]a/ /casa|residencia/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY  /tiene|tenia/ /un/ /casa|residencia/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY  /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY  /se/ /muda/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /,/ /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /pasaba/ /su/ /niñez/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY /pasaba/ /su/ /niñez/ [] /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /se/ /crié/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /el|la/ /delegado|delegada/ /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /vive/ /en/  $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /vivía/ /en/  $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /,/ /viviendo/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  /[Ll]a/ /casa|residencia/ /de/ $ENTITY /,/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /tiene|tenia/ /un/ /casa|residencia/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /se/ /mudó/ /a/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /se/ /muda/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /,/ /[Dd]espués|[Aa]ntes/ /de/ /que/ /se/ /mudó|mudieron/ /a/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /pasaba/ /su/ /niñez/ /en/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence", pattern: (  $ENTITY [] /pasaba/ /su/ /niñez/ [] /en/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /,/ /nativo/ /de|del/ /la/? /zona|región|estado/ /de/? $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( /[Nn]ativo/ /de|del/ /la/? /región|zona|estado/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY [{lemma:/,/}] /quien/ /se/ /mudó/ /a|al/ /la/? /región|zona|estado/ /de/? $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /a|al/ /la/? /región|zona|estado/ /de/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /trasladó|trasladará/ /de|del/ /la?/ /región|zona|estado/ /de/ $SLOT_VALUE ) }
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY /se/ /mudó/ /a|al/ /la/? /región|zona|estado/ /de/ $SLOT_VALUE ) }
+
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /[Ee]l/ /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /[Ll]a/ /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /fue/ /[Ee]l/ /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /fue/ /[Ll]a/ /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /fue/ /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /fue/ /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /[Ee]l/ /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /[Ll]a/ /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /[Ee]l/ [] /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /[Ll]a/ [] /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ [] /gobernador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ [] /gobernadora/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /gobernador/ [] /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /gobernadora/ [] /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ee]l/ /gobernador/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ll]a/ /gobernadora/ /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ee]l/ /gobernador/ [] /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ll]a/ /gobernadora/ [] /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ll]a/ /representante/ $ENTITY /,/ []? /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ee]l/ /representante/ $ENTITY /,/ []? /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ll]a/ /senadora/ $ENTITY /,/ []? /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( /[Ee]l/ /senador/ $ENTITY /,/ []? /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /[Ee]l/ /representante/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /[Ll]a/ /representante/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /representante/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /representante/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /[Ee]l/ /senador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /[Ll]a/ /senador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /senador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /es/ /senador/ /de/ $SLOT_VALUE  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $SLOT_VALUE [ner:"TITLE"] $ENTITY  ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( [ner:"TITLE"] /de/ $SLOT_VALUE $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( [ner:"TITLE"] /de/ $SLOT_VALUE /,/ $ENTITY ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ [ner:"TITLE"] /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( $ENTITY /,/ /el|la/ [ner:"TITLE"] /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( [ner:"TITLE"] $ENTITY /,/ /de/ $SLOT_VALUE ) }
+{ result: "per:stateorprovinces_of_residence.rules", pattern: ( [ner:"TITLE"] $ENTITY /,/ /de/ $SLOT_VALUE ) }
