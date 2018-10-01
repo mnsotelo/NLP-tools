@@ -1,10 +1,10 @@
-## Ner example using StanfordCoreNLP
+# Ner example using StanfordCoreNLP
 
-# Requirements
+## Requirements
 
 - Java 8
 - Maven
 
-# Credits
+## Credits
 
 - All credits to StanfordCoreNLP team https://stanfordnlp.github.io/CoreNLP/
