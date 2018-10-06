@@ -35,11 +35,7 @@ public class Ner_POS_tagging_example
     	Annotation document = new Annotation(text);
     	// run all Annotators on this text
     	pipeline.annotate(document);
-    	//StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-    	
-    	//Annotation document = new Annotation("Si la fecha es mayor que 16/04/2018 entonces el descuento será del 15%");
-        //pipeline.annotate(document);
-    
+
         List<CoreMap> sentences = document.get(SentencesAnnotation.class);
      
         for(CoreMap sentence: sentences) {
@@ -48,7 +44,6 @@ public class Ner_POS_tagging_example
                 String pos = token.get(PartOfSpeechAnnotation.class);
                 String ne = token.get(NamedEntityTagAnnotation.class);
      
-                //if(ne.equals("LOC"))
                 System.out.println("Palabra: " + word + " pos: " + pos + " ner:" + ne);
             }
         }
