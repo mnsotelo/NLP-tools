@@ -1,4 +1,4 @@
-package com.example.ner_tagging_example;
+package com.example.ner_pos_tagging_example;
 
 import java.util.List;
 import java.util.Properties;
@@ -20,7 +20,7 @@ import edu.stanford.nlp.util.CoreMap;
  * Hello world!
  *
  */
-public class Ner_example 
+public class Ner_POS_tagging_example 
 {
     public static void main( String[] args )
     {
